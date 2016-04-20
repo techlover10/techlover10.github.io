@@ -6,7 +6,7 @@
     <script src="docs/js/metro.js"></script>
 </head>
 
-<div class="app-bar"style="background-color:darkgreen">
+<div class="app-bar fixed-top"style="background-color:darkgreen">
     <ul class="app-bar-menu" style="background-color:darkgreen">
         <li><a href="index.html">Home</a></li>
         <li>
@@ -25,10 +25,16 @@
 					<li><a href="Composition.html">Composition</a></li>
 				</ul>
         </li>
-        <li><a href="about.html">About</a></li>
+        <li>
+			<a href="" class="dropdown-toggle">About</a>
+				<ul class="d-menu" data-role="dropdown">
+					<li><a href="Resume.html">Resume</a></li>
+					<li><a href="Experience.html">Experience</a></li>
+				</ul>
+		</li>
     </ul>
 </div>
-	<div class="page-content" align="center">
+	<div class="page-content" align="center"style="padding-top: 50px">
 	<div class="bg-white fg-black align-center">
 		<div class="no-overflow" style="bg-lightGray fg-white align-center padding-top: 20px; padding-bottom: 10px">
 			<h1 style="font-size: 40px; line-height: 1.2" class="text-shadow metro-title">ClassTeX</h1>
@@ -43,16 +49,17 @@
 		</div>
 		
 		<div align="center">
-			<div style="width:90%; margin:5px">
+			<div style="margin:5px">
 				<h2>ClassTeX is a LaTeX template formatted for quick, clean, and clear note-taking.</h2>
-			</div><div style="float:right; width:30%; padding-right: 50px; margin:20px">
-				<ul>
-				<li> Designed for use with XeLaTeX, but untested compatible with other compilers (untested, but was not designed to require extensive font support)</li>
-				<li> Includes predefined macros for creating text boxes for emphasis</li>
-				<li> Predefined shortcuts for common terms used when taking notes in CS/Math/Engineering classes</li>
-				</ul>
 			</div>
-		</div>
+			<div style="margin:20px">
+
+					<ul>
+					<li> Designed for use with XeLaTeX, but untested compatible with other compilers (untested, but was not designed to require extensive font support)</li>
+					<li> Includes predefined macros for creating text boxes for emphasis</li>
+					<li> Predefined shortcuts for common terms used when taking notes in CS/Math/Engineering classes</li>
+					</ul>
+			</div>
 	</div>
 </div>
 </html>

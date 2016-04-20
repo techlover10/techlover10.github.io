@@ -6,7 +6,7 @@
     <script src="docs/js/metro.js"></script>
 </head>
 		<title>Home | Jared Wong</title>
-<div class="app-bar"style="background-color:darkGray">
+<div class="app-bar fixed-top"style="background-color:darkGray">
     <ul class="app-bar-menu" style="background-color:darkGray">
         <li><a href="index.html">Home</a></li>
         <li>
@@ -25,10 +25,16 @@
 					<li><a href="Composition.html">Composition</a></li>
 				</ul>
         </li>
-        <li><a href="about.html">About</a></li>
+        <li>
+			<a href="" class="dropdown-toggle">About</a>
+				<ul class="d-menu" data-role="dropdown">
+					<li><a href="Resume.html">Resume</a></li>
+					<li><a href="Experience.html">Experience</a></li>
+				</ul>
+		</li>
     </ul>
 </div>
-<div class="page-content" align="center">
+<div class="page-content" align="center"style="padding-top: 50px">
 	<img src="assets/codebkgd.png"></img>
 	<div class="bg-white fg-black align-center">
 		<div class="no-overflow" style="bg-lightGray fg-white align-center padding-top: 20px; padding-bottom: 10px">
@@ -43,18 +49,41 @@
 			
 		</div>
 		<div style="margin:30px">
-			<div class="section">
-				<h3>Who am I?</h3>
-				<p style="font-size:15px">My name is Jared.  I am a second-year student at Cornell University pursuing a major in <a href="www.cs.cornell.edu"> Computer Science </a> and a minor in <a href="www.cs.cornell.edu/ComputingArts/">Computing in the Arts</a>.
-				</p>
-				<h3 style="padding-top: 10px">What do I do?</h3>
-				<p style="font-size:15px">I <a href="https://github.com/techlover10/"> write code</a>.  I <a href="https://www.youtube.com/rangerthearranger"> arrange music</a>.  Occasionally, I even spit a verse (or a <a href="http://thenewstack.io/oh-caml-five-songs-programming/"> few</a>).
-				</p>
-				<h3 style="padding-top: 10px">Why do I do it?</h3>
-				<p style="font-size:15px">I enjoy creating.  I enjoy the process of developing ideas, working to create them, and seeing them brought to fruition.  I began studying Computer Science in the hopes of eventually finding work in music technology/software development, an area which blends both my passion for music and my love of all things digital.
-				</p>
+			<div class="flex-grid">
+				<div class="row">
+					<div class="cell colspan6 " style="background-color:lightGray; margin-bottom: 10px; padding:30px">
+						<h3>Who am I?</h3>
+					</div>
+					<div class="cell colspan6" style="padding:10px">
+						<p style="font-size:15px">My name is Jared.  I am a second-year student at Cornell University pursuing a major in <a href="http://www.cs.cornell.edu"target="_blank"> Computer Science </a> and a minor in <a href="http://www.cs.cornell.edu/ComputingArts/" target="_blank">Computing in the Arts</a>.
+						</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="cell colspan6" style="background-color:darkGray; padding:30px; margin-bottom: 10px">
+						<h3>What do I do?</h3>
+					</div>
+					<div class="cell colspan6" style="padding:10px">
+						<p style="font-size:15px">I <a href="https://github.com/techlover10/" target="_blank"> write code</a>.  I <a href="https://www.youtube.com/rangerthearranger" target="_blank"> arrange music</a>.  Occasionally, I even spit a verse (or a <a href="http://thenewstack.io/oh-caml-five-songs-programming/" target="_blank"> few</a>).
+						</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="cell colspan6" style="background-color:lightGray; padding:30px; margin-bottom:10px">
+						<h3>Why do I do it?</h3>
+					</div>
+				<div class="cell colspan6" style="padding:10px">
+					<p style="font-size:15px">I enjoy creating.  I enjoy the process of developing ideas, working to create them, and seeing them brought to fruition.  I began studying Computer Science in the hopes of eventually finding work in music technology/software development, an area which blends both my passion for music and my love of all things digital.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
+		<h6 style="line-height:3"> Website style adapted from Metro UI CSS.  All rights reserved. </h6>
+	</div>
 </div>
+	
 </html>
