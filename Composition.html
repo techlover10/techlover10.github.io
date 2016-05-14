@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <link href="docs/css/metro.css" rel="stylesheet">
-	<link href="docs/css/metro-responsive.css" rel="stylesheet">
+    <link href="docs/css/metro-responsive.css" rel="stylesheet">
     <script src="test/RequireJS/scripts/jquery.js"></script>
     <script src="docs/js/metro.js"></script>
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-</head>
-<title>Composition | Jared Wong</title>
-<div class="app-bar fixed-top"style="background-color:darkblue">
+    <script>
+function showCharm(id){
+  var  charm = $("#"+id+"-charm").data("charm");
+  if (charm.element.data("opened") === true) {
+    charm.close();
+  } else {
+    charm.open();
+  }
+}
+    </script>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  </head>
+  <title>Composition | Jared Wong</title>
+  <div class="app-bar fixed-top"style="background-color:darkblue">
     <ul class="app-bar-menu" style="background-color:darkblue">
-        <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="/index.html" class="dropdown-toggle">Software</a>
-            <ul class="d-menu" data-role="dropdown">
-                <li><a href="ClassTeX.html">ClassTeX</a></li>
-                <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
-                <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
-                <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
-			</ul>
-		</li>
-		<li>
-            <a href="" class="dropdown-toggle">Music</a>
-				<ul class="d-menu" data-role="dropdown">
-					<li><a href="Arrangements.html">Arrangements</a></li>
-					<li><a href="Composition.html">Composition</a></li>
-				</ul>
-        </li>
-        <li>
-			<a href="" class="dropdown-toggle">About</a>
-				<ul class="d-menu" data-role="dropdown">
-					<li><a href="Resume.html">Resume</a></li>
-					<li><a href="Experience.html">Experience</a></li>
-				</ul>
-		</li>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="/index.html" class="dropdown-toggle">Software</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="ClassTeX.html">ClassTeX</a></li>
+          <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
+          <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
+          <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="dropdown-toggle">Music</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="Arrangements.html">Arrangements</a></li>
+          <li><a href="Composition.html">Composition</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="dropdown-toggle">About</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="Resume.html">Resume</a></li>
+          <li><a href="Experience.html">Experience</a></li>
+        </ul>
+      </li>
     </ul>
-</div>
-<div class="page-content" align="center"style="padding-top: 0px">
-	<body>
-		<div class="no-overflow" style="background-image:url(assets/rbbkgd.jpg); padding:30px; height:300px">
-		<div class="grid">
-			<div class="row cells5">
-			<div class="cell colspan1">
-			</div>
-			<div class="cell colspan1">
-			<a href="https://www.soundcloud.com/rangersbeats" target="_blank"><img src="assets/beatslogo.jpg" style="width:200px; padding-top:50px"></img></a>
-			</div>
-			<div class="cell colspan1">
-			</div>
-			<div class="cell colspan1" style="padding-top:50px">
-			<a href="https://www.fiverr.com/swaggernaut812" target="_blank"><img src="assets/swaggernautlogo.jpg" style="width:200px; padding-top:0px;border-radius: 100px;-webkit-border-radius: 100px;-moz-border-radius: 100px;"></img></a>
-			</div>
-			<div class="cell colspan1">
-			</div>
-			</div>
-		</div>
-		</div>
-		<h4 style="padding:10px">I run a few musical "projects" in my spare time: rangers.beats is my hip-hop/rap composition project, including original songs and instrumentals.  swaggernaut812 is my custom theme music business, exclusively offered through Fiverr.com.</h4>
-		<div class="grid">
-						
-			<div class="row cells2">
-			<div class="cell colspan1">
-			<p style="padding:10px">During my sophomore year, I was inspired by the "weeder" computer science classes I was enrolled in to write a couple of songs, in an effort to find humor in what are normally considered two of the most taxing courses in Cornell's CS curriculum.  C to Assembly (Cache Race Anthem) was inspired by CS 3410, a low-level system organization class.  flOCaml was inspired by CS 3110, the OCaml language, and the love-hate relationship every functional programming student experiences.</p>
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/263112025&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/234475825&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			</div>
-			<div class="cell colspan1">
-			<p style="padding:10px; padding-bottom:50px"> Since 2012, I have run a small business/side project selling custom instrumental theme music on Fiverr.com.  Shortly after I began offering the service, many people requested vocals- in response, I expanded my offerings to include jingles with rap lyrics.  Since then, I've made more than 50 sales, achieved Fiverr's Level 2 status, and maintained near-perfect reviews.  Some examples of my work are embedded below, and more samples of my past work can be heard on my gig's page <a href="https://www.fiverr.com/swaggernaut812/make-you-a-theme-song">here</a>, or on my project's <a href="https://www.youtube.com/swaggernaut812music">YouTube page</a>.
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/HbMg6wK2p2o" frameborder="0" style="padding-top:20px" allowfullscreen></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/DtNxhARY_yU" frameborder="0" allowfullscreen></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/pOIL2n3b5f8" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</body>
-</div>
+  </div>
+  <div class="page-content" align="center"style="padding-top: 0px">
+    <body>
+      <div class="no-overflow" style="background-image:url(assets/rbbkgd.jpg); padding:30px; height:300px">
+        <div class="grid">
+          <div class="row cells5">
+            <div class="cell colspan1">
+            </div>
+            <div class="cell colspan1">
+              <a href="https://www.soundcloud.com/rangersbeats" target="_blank"><img src="assets/beatslogo.jpg" style="width:200px; padding-top:50px"></img></a>
+            </div>
+            <div class="cell colspan1">
+            </div>
+            <div class="cell colspan1" style="padding-top:50px">
+              <a href="https://www.fiverr.com/swaggernaut812" target="_blank"><img src="assets/swaggernautlogo.jpg" style="width:200px; padding-top:0px;border-radius: 100px;-webkit-border-radius: 100px;-moz-border-radius: 100px;"></img></a>
+            </div>
+            <div class="cell colspan1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4 style="padding:10px">I run a few musical "projects" in my spare time: rangers.beats is my hip-hop/rap composition project, including original songs and instrumentals.  swaggernaut812 is my custom theme music business, exclusively offered through Fiverr.com.</h4>
+      <div class="grid">
+
+        <div class="row cells2">
+          <div class="cell colspan1">
+            <p style="padding:10px">During my sophomore year, I was inspired by the "weeder" computer science classes I was enrolled in to write a couple of songs, in an effort to find humor in what are normally considered two of the most taxing courses in Cornell's CS curriculum.  C to Assembly (Cache Race Anthem) was inspired by CS 3410, a low-level system organization class.  flOCaml was inspired by CS 3110, the OCaml language, and the love-hate relationship every functional programming student experiences.</p>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/263112025&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/234475825&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+          </div>
+          <div class="cell colspan1">
+            <p style="padding:10px; padding-bottom:50px"> Since 2012, I have run a small business/side project selling custom instrumental theme music on Fiverr.com.  Shortly after I began offering the service, many people requested vocals- in response, I expanded my offerings to include jingles with rap lyrics.  Since then, I've made more than 50 sales, achieved Fiverr's Level 2 status, and maintained near-perfect reviews.  Some examples of my work are embedded below, and more samples of my past work can be heard on my gig's page <a href="https://www.fiverr.com/swaggernaut812/make-you-a-theme-song">here</a>, or on my project's <a href="https://www.youtube.com/swaggernaut812music">YouTube page</a>.
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HbMg6wK2p2o" frameborder="0" style="padding-top:20px" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DtNxhARY_yU" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pOIL2n3b5f8" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+    </body>
+    <div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
+      <button class="button" onclick="showCharm('bottom')">Copyright Info</button>
+    </div>
+    <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved </h1><span class="charm-closer"></span></div>
+      </div>
+  </div>
 </html>

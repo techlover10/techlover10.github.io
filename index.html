@@ -1,91 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <link href="docs/css/metro.css" rel="stylesheet">
-	<link href="docs/css/metro-responsive.css" rel="stylesheet">
+    <link href="docs/css/metro-responsive.css" rel="stylesheet">
     <script src="test/RequireJS/scripts/jquery.js"></script>
     <script src="docs/js/metro.js"></script>
-	<link rel='icon' type='image/x-icon' href='favicon.ico' />
-</head>
-<title>Home | Jared Wong</title>
-<div class="app-bar fixed-top"style="background-color:darkGray">
+    <script src="docs/js/ga.js"></script>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel='icon' type='image/x-icon' href='favicon.ico' />
+    <script>
+function showCharm(id){
+  var  charm = $("#"+id+"-charm").data("charm");
+  if (charm.element.data("opened") === true) {
+    charm.close();
+  } else {
+    charm.open();
+  }
+}
+    </script>
+
+  </head>
+  <title>Home | Jared Wong</title>
+  <div class="app-bar fixed-top"style="background-color:darkGray">
     <ul class="app-bar-menu" style="background-color:darkGray">
-        <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="/index.html" class="dropdown-toggle">Software</a>
-            <ul class="d-menu" data-role="dropdown">
-                <li><a href="ClassTeX.html">ClassTeX</a></li>
-                <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
-                <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
-                <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
-			</ul>
-		</li>
-		<li>
-            <a href="" class="dropdown-toggle">Music</a>
-				<ul class="d-menu" data-role="dropdown">
-					<li><a href="Arrangements.html">Arrangements</a></li>
-					<li><a href="Composition.html">Composition</a></li>
-				</ul>
-        </li>
-        <li>
-			<a href="" class="dropdown-toggle">About</a>
-				<ul class="d-menu" data-role="dropdown">
-					<li><a href="Resume.html">Resume</a></li>
-					<li><a href="Experience.html">Experience</a></li>
-				</ul>
-		</li>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="/index.html" class="dropdown-toggle">Software</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="ClassTeX.html">ClassTeX</a></li>
+          <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
+          <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
+          <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="dropdown-toggle">Music</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="Arrangements.html">Arrangements</a></li>
+          <li><a href="Composition.html">Composition</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="dropdown-toggle">About</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="Resume.html">Resume</a></li>
+          <li><a href="Experience.html">Experience</a></li>
+        </ul>
+      </li>
     </ul>
-</div>
-<div class="page-content" align="center"style="padding-top: 0px">
-	<div class="no-overflow" style="background-image:url(assets/codebkgd.png); padding:30px; height:200px"></div>
-	<div class="bg-white fg-black align-center">
-		<div class="no-overflow" style="bg-lightGray fg-white align-center padding-top: 20px; padding-bottom: 10px">
-			<h1 style="font-size: 40px; line-height: 1.2" class="text-shadow metro-title">Jared Wong</h1>
-		</div>
-		<div class="bg-darkGray fg-white align-center">
-			<div class="section">
-				<div class="no-overflow" style="padding-top: 10px; padding-bottom: 10px">
-					<small style="font-size: 25px; line-height: 0.7" class="metro-title">Coder, Composer, Consumer</small>
-				</div>
-			</div>
-			
-		</div>
-		<div style="margin:30px">
-			<div class="flex-grid">
-				<div class="row">
-					<div class="cell colspan6 " style="background-color:lightGray; margin-bottom: 10px; padding:30px">
-						<h3>Who am I?</h3>
-					</div>
-					<div class="cell colspan6" style="padding:10px">
-						<p style="font-size:15px">My name is Jared.  I am a second-year student at Cornell University pursuing a major in <a href="http://www.cs.cornell.edu"target="_blank"> Computer Science </a> and a minor in <a href="http://www.cs.cornell.edu/ComputingArts/" target="_blank">Computing in the Arts</a>.
-						</p>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="cell colspan6" style="background-color:darkGray; padding:30px; margin-bottom: 10px">
-						<h3>What do I do?</h3>
-					</div>
-					<div class="cell colspan6" style="padding:10px">
-						<p style="font-size:15px">I <a href="https://github.com/techlover10/" target="_blank"> write code</a>.  I <a href="https://www.youtube.com/rangerthearranger" target="_blank"> arrange music</a>.  Occasionally, I even spit a verse (or a <a href="http://thenewstack.io/oh-caml-five-songs-programming/" target="_blank"> few</a>).
-						</p>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="cell colspan6" style="background-color:lightGray; padding:30px; margin-bottom:10px">
-						<h3>Why do I do it?</h3>
-					</div>
-				<div class="cell colspan6" style="padding:10px">
-					<p style="font-size:15px">I enjoy creating.  I enjoy the process of developing ideas, working to create them, and seeing them brought to fruition.  I began studying Computer Science in the hopes of eventually finding work in music technology/software development, an area which blends both my passion for music and my love of all things digital.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
-		<h6 style="line-height:3"> Website style adapted from Metro UI CSS.  All rights reserved. </h6>
-	</div>
-</div>
-	
+  </div>
+  <div class="page-content" align="center"style="padding-top: 0px">
+    <div class="no-overflow" style="background-image:url(assets/codebkgd.png); padding:30px; height:200px"></div>
+    <div class="bg-white fg-black align-center">
+      <div class="no-overflow" style="bg-lightGray fg-white align-center padding-top: 20px; padding-bottom: 10px">
+        <h1 style="font-size: 40px; line-height: 1.2" class="text-shadow metro-title">Jared Wong</h1>
+      </div>
+      <div class="bg-darkGray fg-white align-center">
+        <div class="section">
+          <div class="no-overflow" style="padding-top: 10px; padding-bottom: 10px">
+            <small style="font-size: 25px; line-height: 0.7" class="metro-title">Coder, Composer, Consumer</small>
+          </div>
+        </div>
+
+      </div>
+      <div style="margin:30px">
+        <div class="flex-grid">
+          <div class="row">
+            <div class="cell colspan6 " style="background-color:lightGray; margin-bottom: 10px; padding:30px">
+              <h3>Who am I?</h3>
+            </div>
+            <div class="cell colspan6" style="padding:10px">
+              <p style="font-size:15px">My name is Jared.  I am a second-year student at Cornell University pursuing a major in <a href="http://www.cs.cornell.edu"target="_blank"> Computer Science </a> and a minor in <a href="http://www.cs.cornell.edu/ComputingArts/" target="_blank">Computing in the Arts</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell colspan6" style="background-color:darkGray; padding:30px; margin-bottom: 10px">
+              <h3>What do I do?</h3>
+            </div>
+            <div class="cell colspan6" style="padding:10px">
+              <p style="font-size:15px">I <a href="https://github.com/techlover10/" target="_blank"> write code</a>.  I <a href="https://www.youtube.com/rangerthearranger" target="_blank"> arrange music</a>.  Occasionally, I even spit a verse (or a <a href="http://thenewstack.io/oh-caml-five-songs-programming/" target="_blank"> few</a>).
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell colspan6" style="background-color:lightGray; padding:30px; margin-bottom:10px">
+              <h3>Why do I do it?</h3>
+            </div>
+            <div class="cell colspan6" style="padding:10px">
+              <p style="font-size:15px">I enjoy creating.  I enjoy the process of developing ideas, working to create them, and seeing them brought to fruition.  I began studying Computer Science in the hopes of eventually finding work in music technology/software development, an area which blends both my passion for music and my love of all things digital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
+        <button class="button" onclick="showCharm('bottom')">Copyright Info</button>
+      </div>
+      <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved </h1><span class="charm-closer"></span></div>
+    </div>
 </html>

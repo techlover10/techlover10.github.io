@@ -1,88 +1,103 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <link href="docs/css/metro.css" rel="stylesheet">
-	<link href="docs/css/metro-responsive.css" rel="stylesheet">
+    <link href="docs/css/metro-responsive.css" rel="stylesheet">
     <script src="test/RequireJS/scripts/jquery.js"></script>
     <script src="docs/js/metro.js"></script>
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-</head>
-<title>CAH | Jared Wong</title>
-<div class="app-bar fixed-top"style="background-color:darkgreen">
+    <script>
+function showCharm(id){
+  var  charm = $("#"+id+"-charm").data("charm");
+  if (charm.element.data("opened") === true) {
+    charm.close();
+  } else {
+    charm.open();
+  }
+}
+    </script>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  </head>
+  <title>CAH | Jared Wong</title>
+  <div class="app-bar fixed-top"style="background-color:darkgreen">
     <ul class="app-bar-menu" style="background-color:darkgreen">
-        <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="/index.html" class="dropdown-toggle">Software</a>
-            <ul class="d-menu" data-role="dropdown">
-			    <li><a href="ClassTeX.html">ClassTeX</a></li>
-                <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
-                <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
-                <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
-			</ul>
-		</li>
-		<li>
-            <a href="" class="dropdown-toggle">Music</a>
-				<ul class="d-menu" data-role="dropdown">
-					<li><a href="Arrangements.html">Arrangements</a></li>
-					<li><a href="Composition.html">Composition</a></li>
-				</ul>
-        </li>
-        <li>
-			<a href="" class="dropdown-toggle">About</a>
-				<ul class="d-menu" data-role="dropdown">
-					<li><a href="Resume.html">Resume</a></li>
-					<li><a href="Experience.html">Experience</a></li>
-				</ul>
-		</li>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="/index.html" class="dropdown-toggle">Software</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="ClassTeX.html">ClassTeX</a></li>
+          <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
+          <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
+          <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="dropdown-toggle">Music</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="Arrangements.html">Arrangements</a></li>
+          <li><a href="Composition.html">Composition</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="dropdown-toggle">About</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="Resume.html">Resume</a></li>
+          <li><a href="Experience.html">Experience</a></li>
+        </ul>
+      </li>
     </ul>
-</div>
-<div class="page-content bg-black fg-white" align="center"style="padding-top: 50px"
-	<body class="bg-black fg-white">
+  </div>
+  <div class="page-content bg-black fg-white" align="center"style="padding-top: 50px"
+    <body class="bg-black fg-white">
 
-		<div class="bg-black fg-white" style="padding-top:50px">
-			<img src="assets/cahlogo.jpg" style="padding:0px"></img>
-		</div>
-		<div class="section bg-black fg-white">
-			<h2 style="padding:40px">Cards Against Humanity Game Engine.  Written entirely in OCaml.</h2>
-			<div class="bg-white fg-white align-center">
-					<div class="section">
-						<div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
-						</div>
-					</div>
-				</div>
-			<div class="grid">
-				<div class="row cells4">
-					<div class="cell colspan3">
-					<h4 style="padding-bottom:20px; font-size:30px">Background</h4>
-					<p style="padding-left:30px; padding-top:25px; padding-right:30px; padding-bottom:25px; font-size:20px; font-weight:lighter">Cards Against OCaml is a multiplayer, server-client implementation of the popular card game Cards Against Humanity.  Written in November of 2015 as the final project for CS 3110 at Cornell University, Cards Against OCaml was a team effort representing the result of several weeks of design, implementation, and testing.</p>
-					</div>
-					<div class="cell colspan1">
-					<img src="assets/cahstart.png" style="height:400px"></img>
-					</div>
-				</div>
-				<div class="row cells4">
-					<div class="cell colspan3">
-					<img src="assets/cah3.png" style="height:450; padding-left:30px; padding-right:30px; padding-top:25px; padding-bottom:25px"></img>
-					</div>
-					<div class="cell colspan1">
-					<h4 style="padding-bottom:20px; padding-left:30px; padding-right:30px; padding-top:25px; padding-bottom:25px; font-size:30px">Design</h4>
-					<p style="padding-left:30px; padding-top:25px; padding-right:30px; padding-bottom:25px; font-size:20px; font-weight:lighter">Each player is presented with a window showing their current hand.  A separate score window can be used to track the past winning cards.</p>
-					</div>
-				</div>
-				<div class="row cells4">
-					<div class="cell colspan3">
-					<h4 style="padding-bottom:20px; font-size:30px">The Bot</h4>
-					<p style="padding-left:30px; padding-top:25px; padding-right:30px; padding-bottom:25px; font-size:20px; font-weight:lighter">Cards Against OCaml also includes a trained bot which uses collected data to play and judge cards, just as a real player would.</p>
-					</div>
-					<div class="cell colspan1">
-					<img src="assets/cahbot.png" style="height:400px"></img>
-					</div>
-				</div>
-				<div class="row cells4">
-					<p>Under construction.  Stay tuned!</p>
-				</div>
-			</div>
-			</div>
-	</body>
-</div>
+      <div class="bg-black fg-white" style="padding-top:50px">
+        <img src="assets/cahlogo.jpg" style="padding:0px"></img>
+      </div>
+      <div class="section bg-black fg-white">
+        <h2 style="padding:40px">Cards Against Humanity Game Engine.  Written entirely in OCaml.</h2>
+        <div class="bg-white fg-white align-center">
+          <div class="section">
+            <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="row cells4">
+            <div class="cell colspan3">
+              <h4 style="padding-bottom:20px; font-size:30px">Background</h4>
+              <p style="padding-left:30px; padding-top:25px; padding-right:30px; padding-bottom:25px; font-size:20px; font-weight:lighter">Cards Against OCaml is a multiplayer, server-client implementation of the popular card game Cards Against Humanity.  Written in November of 2015 as the final project for CS 3110 at Cornell University, Cards Against OCaml was a team effort representing the result of several weeks of design, implementation, and testing.</p>
+            </div>
+            <div class="cell colspan1">
+              <img src="assets/cahstart.png" style="height:400px"></img>
+            </div>
+          </div>
+          <div class="row cells4">
+            <div class="cell colspan3">
+              <img src="assets/cah3.png" style="height:450; padding-left:30px; padding-right:30px; padding-top:25px; padding-bottom:25px"></img>
+            </div>
+            <div class="cell colspan1">
+              <h4 style="padding-bottom:20px; padding-left:30px; padding-right:30px; padding-top:25px; padding-bottom:25px; font-size:30px">Design</h4>
+              <p style="padding-left:30px; padding-top:25px; padding-right:30px; padding-bottom:25px; font-size:20px; font-weight:lighter">Each player is presented with a window showing their current hand.  A separate score window can be used to track the past winning cards.</p>
+            </div>
+          </div>
+          <div class="row cells4">
+            <div class="cell colspan3">
+              <h4 style="padding-bottom:20px; font-size:30px">The Bot</h4>
+              <p style="padding-left:30px; padding-top:25px; padding-right:30px; padding-bottom:25px; font-size:20px; font-weight:lighter">Cards Against OCaml also includes a trained bot which uses collected data to play and judge cards, just as a real player would.</p>
+            </div>
+            <div class="cell colspan1">
+              <img src="assets/cahbot.png" style="height:400px"></img>
+            </div>
+          </div>
+          <div class="row cells4">
+            <p>Under construction.  Stay tuned!</p>
+          </div>
+        </div>
+      </div>
+    </body>
+    <div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
+      <button class="button" onclick="showCharm('bottom')">Copyright Info</button>
+    </div>
+    <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved </h1><span class="charm-closer"></span></div>
+  </div>
+  </div>
 </html>
