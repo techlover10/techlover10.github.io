@@ -1,253 +1,198 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="docs/css/metro.css" rel="stylesheet">
-    <link href="docs/css/metro-responsive.css" rel="stylesheet">
-    <script src="test/RequireJS/scripts/jquery.js"></script>
-    <script src="docs/js/metro.js"></script>
-    <script>
-function showCharm(id){
-  var  charm = $("#"+id+"-charm").data("charm");
-  if (charm.element.data("opened") === true) {
-    charm.close();
-  } else {
-    charm.open();
-  }
-}
-    </script>
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-  </head>
-  <title>Resume | Jared Wong</title>
-  <div class="app-bar fixed-top"style="background-color:darkred">
-    <ul class="app-bar-menu" style="background-color:darkred">
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="/index.html" class="dropdown-toggle">Software</a>
-        <ul class="d-menu" data-role="dropdown">
-          <li><a href="ClassTeX.html">ClassTeX</a></li>
-          <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
-          <li><a href="CardsAgainstOCaml.html">Cards Against OCaml</a></li>
-          <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="" class="dropdown-toggle">Music</a>
-        <ul class="d-menu" data-role="dropdown">
-          <li><a href="Arrangements.html">Arrangements</a></li>
-          <li><a href="Composition.html">Composition</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="" class="dropdown-toggle">About</a>
-        <ul class="d-menu" data-role="dropdown">
-          <li><a href="Resume.html">Resume</a></li>
-          <li><a href="Experience.html">Experience</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <div class="page-content" align="center"style="padding-top: 50px">
-    <body>
-      <div class="bg-white fg-black align-center">
-        <div class="no-overflow" style="align-center padding-top: 20px; padding-bottom: 10px">
-          <h1 style="font-size: 40px; line-height: 1.2" class="text-shadow metro-title">Jared Wong</h1>
-          <h3><small> <a href="https://github.com/techlover10/" target="_blank">Visit my Github</a> | <a href="http://www.linkedin.com/in/jaredmwong" target="_blank">Connect with me on LinkedIn</a></small></h3>
-          <h3><small> </small></h3>
-        </div>
-        <div class="grid">
-          <div class="row cells4">
-            <div class="cell"> 
-              <div class="bg-red fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
-                  </div>
-                </div>
-              </div>
-              <h3 align="right">Education</h3> </div>
-            <div class="cell colspan3" align="left">
-              <div class="bg-red fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                  </div>
-                </div>
-              </div>
-              <h3>Cornell University <small> BA in Computer Science</small></h3>
-              <p> Expected May 2018 | Ithaca, NY </p>
-              <h5>Coursework</h5>
-              <ul>
-                <li>Functional Programming</li>
-                <li>Object-Oriented Programming</li>
-                <li>Robotic Manipulation</li>
-                <li>Discrete Structures</li>
-                <li>Computing in the Arts</li>
-                <li>Networks</li>
-                <li>Intro to Computing using MATLAB</li>
-                <li>Linear Algebra</li>
-                <li>Intermediate Spanish Composition and Conversation II</li>
-                <li>Physics of Musical Sound</li>
-              </ul>
-              <h5>Honors/Awards</h5>
-              <p> Arts and Sciences Dean's List (multiple semesters)</p>
-              <div class="bg-red fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                  </div>
-                </div>
-              </div>
-              <h3>Shadow Hills High School <small> High School Diploma</small></h3>
-              <p> June 2014 | Indio, CA </p>
-              <h5>Honors/Awards</h5>
-              <p> Salutatorian </p>
-            </div>
-          </div>
-          <div class="row cells4">
-            <div class="cell"> 
-              <div class="bg-blue fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
-                  </div>
-                </div>
-              </div>
-              <h3 align="right">Computer Science Experience</h3> </div>
-            <div class="cell colspan3" align="left">
-              <div class="bg-blue fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                  </div>
-                </div>
-              </div>
-              <h3>Cornell University <small> CS 1112 Course Consultant </small></h3>
-              <p> August 2015 - December 2015 | Ithaca, NY </p>
-              <ul>
-                <li>Graded assignments and exams for a class of >200 students</li>
-                <li>Helped answer questions during a weekly discussion/lab section run by TAs.</li>
-                <li>Held consulting/office hours to answer questions about course material.</li>
-              </ul>
-              <div class="bg-blue fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                  </div>
-                </div>
-              </div>
-              <h3>Cards Against OCaml<small> "Cards Against Humanity" Engine </small></h3>
-              <p> November 2015 | OCaml | Functional Programming Final Project</p>
-              <ul>
-                <li>Implemented the GUI forthe project, using the Lablgtk2 library for OCaml.</li>
-                <li>Worked in a team of four people to design and implement the system.</li>
-                <li>Applied knowledge of functional design to create a working game engine.</li>
-              </ul>
-              <div class="bg-blue fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                  </div>
-                </div>
-              </div>
-              <h3>"Pitbull Generator" <small> Lyric Generator Program </small></h3>
-              <p> December 2014 | MATLAB | Inspired by Computing in the Arts </p>
-              <ul>
-                <li>Program generates rap lyrics in the style of the popular hip-hop artist Pitbull.</li>
-                <li>Used Markov models and biased randomness to imitate the artist's voice.</li>
-                <li>Written with OOP in mind to allow for improvements and refinements.</li>
-              </ul>
-              <div class="bg-blue fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                  </div>
-                </div>
-              </div>
-              <h3>Measures Tempo Time Converter <small> Musical Utility </small></h3>
-              <p> April 2012 | Visual Basic | Used for Music Sales Business </p>
-              <ul>
-                <li>Simple utility for converting between musical measures, tempo, and duration.</li>
-                <li>Available for the desktop on GitHub, and in beta on the Windows Store.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="row cells4">
-            <div class="cell"> 
-              <div class="bg-green fg-white align-center">
-                <div class="section">
-                  <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
-                  </div>
-                </div>
-              </div><h3 align="right">Other Experience</h3> </div>
-              <div class="cell colspan3" align="left">
-                <div class="bg-green fg-white align-center">
-                  <div class="section">
-                    <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                    </div>
-                  </div>
-                </div>
-                <h3>Independent <small> Music Composer and Artist</small></h3>
-                <p> April 2012 - Present | Fiverr.com </p>
-                <ul>
-                  <li>Write, produce, and sell custom theme music for independent clients.</li>
-                  <li>Communicate with clients to ensure buyer satisfaction and maintain excellent ratings.</li>
-                  <li>Achieved ”Level 2” seller ranking in 2015 for consistently high ratings from buyers.</li>
-                </ul>
-                <div class="bg-green fg-white align-center">
-                  <div class="section">
-                    <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                    </div>
-                  </div>
-                </div>
-                <h3>#flOCaml <small> Musical Tribute to OCaml</small></h3>
-                <p> December 2015 | Inspired by CS3110: Functional Programming </p>
-                <ul>
-                  <li>Featured on the Inria OCaml listserv, and also seen on the OCaml Reddit.</li>
-                  <li>Went viral at Cornell after a live performance for CS 3110's final lecture.</li>
-                </ul>
-                <div class="bg-green fg-white align-center">
-                  <div class="section">
-                    <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                    </div>
-                  </div>
-                </div>
-                <h3>CU Cyphers: Hip-Hop Club <small> Vice President </small></h3>
-                <p> August 2015 - Present </p>
-                <ul>
-                  <li>Work with the executive board to manage the club's recruiting, coordinate activities, budget for materials, and organize meetings.</li>
-                </ul>
-                <div class="bg-green fg-white align-center">
-                  <div class="section">
-                    <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                    </div>
-                  </div>
-                </div>
-                <h3>Cornell Lunatic - Humor Magazine <small> Writer</small></h3>
-                <p> August 2014 - Present </p>
-                <ul>
-                  <li>Coordinated with other staff members to redesign the official <a href="http://www.cornelllunatic.com" target="_blank"> website</a>.</li>
-                </ul>
-              </div>
-              <div class="row cells4">
-                <div class="cell"> 
-                  <div class="bg-orange fg-white align-center">
-                    <div class="section">
-                      <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
-                      </div>
-                    </div>
-                  </div><h3 align="right">Skills</h3> </div>
-                  <div class="cell colspan3" align="left">
-                    <div class="bg-orange fg-white align-center">
-                      <div class="section">
-                        <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
-                        </div>
-                      </div>
-                    </div>
-                    <h3>Technical <small> MATLAB | OCaml | Java | Python | LaTeX | Git | ROS | Visual Basic </small></h3>
-                    <h3>Music <small> Sibelius | MuseScore | Audacity | Linux MultiMedia Studio | Pro Tools </small></h3>
-                    <h3>Languages <small> Native English | Conversational Spanish </small></h3>
-
-                  </div>
-              </div>
-          </div>
-        </div>
-    </body>
-    <div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
-      <button class="button" onclick="showCharm('bottom')">Copyright Info</button>
+<div class="page-content" align="center"style="padding-top: 50px">
+  <div class="bg-white fg-black align-center">
+    <div class="no-overflow" style="align-center padding-top: 20px; padding-bottom: 10px">
+      <h1 style="font-size: 40px; line-height: 1.2" class="text-shadow metro-title">Jared Wong</h1>
+      <h3><small> <a href="https://github.com/techlover10/" target="_blank">Visit my Github</a> | <a href="http://www.linkedin.com/in/jaredmwong" target="_blank">Connect with me on LinkedIn</a></small></h3>
+      <h3><small> </small></h3>
     </div>
-    <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved </h1><span class="charm-closer"></span></div>
+    <div class="grid">
+      <div class="row cells4">
+        <div class="cell"> 
+          <div class="bg-red fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
+              </div>
+            </div>
+          </div>
+          <h3 align="right">Education</h3> </div>
+        <div class="cell colspan3" align="left">
+          <div class="bg-red fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+              </div>
+            </div>
+          </div>
+          <h3>Cornell University <small> BA in Computer Science</small></h3>
+          <p> Expected May 2018 | Ithaca, NY </p>
+          <h5>Coursework</h5>
+          <ul>
+            <li>Functional Programming</li>
+            <li>Object-Oriented Programming</li>
+            <li>Robotic Manipulation</li>
+            <li>Discrete Structures</li>
+            <li>Computing in the Arts</li>
+            <li>Networks</li>
+            <li>Intro to Computing using MATLAB</li>
+            <li>Linear Algebra</li>
+            <li>Intermediate Spanish Composition and Conversation II</li>
+            <li>Physics of Musical Sound</li>
+          </ul>
+          <h5>Honors/Awards</h5>
+          <p> Arts and Sciences Dean's List (multiple semesters)</p>
+          <div class="bg-red fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+              </div>
+            </div>
+          </div>
+          <h3>Shadow Hills High School <small> High School Diploma</small></h3>
+          <p> June 2014 | Indio, CA </p>
+          <h5>Honors/Awards</h5>
+          <p> Salutatorian </p>
+        </div>
       </div>
+      <div class="row cells4">
+        <div class="cell"> 
+          <div class="bg-blue fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
+              </div>
+            </div>
+          </div>
+          <h3 align="right">Computer Science Experience</h3> </div>
+        <div class="cell colspan3" align="left">
+          <div class="bg-blue fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+              </div>
+            </div>
+          </div>
+          <h3>Cornell University <small> CS 1112 Course Consultant </small></h3>
+          <p> August 2015 - December 2015 | Ithaca, NY </p>
+          <ul>
+            <li>Graded assignments and exams for a class of >200 students</li>
+            <li>Helped answer questions during a weekly discussion/lab section run by TAs.</li>
+            <li>Held consulting/office hours to answer questions about course material.</li>
+          </ul>
+          <div class="bg-blue fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+              </div>
+            </div>
+          </div>
+          <h3>Cards Against OCaml<small> "Cards Against Humanity" Engine </small></h3>
+          <p> November 2015 | OCaml | Functional Programming Final Project</p>
+          <ul>
+            <li>Implemented the GUI forthe project, using the Lablgtk2 library for OCaml.</li>
+            <li>Worked in a team of four people to design and implement the system.</li>
+            <li>Applied knowledge of functional design to create a working game engine.</li>
+          </ul>
+          <div class="bg-blue fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+              </div>
+            </div>
+          </div>
+          <h3>"Pitbull Generator" <small> Lyric Generator Program </small></h3>
+          <p> December 2014 | MATLAB | Inspired by Computing in the Arts </p>
+          <ul>
+            <li>Program generates rap lyrics in the style of the popular hip-hop artist Pitbull.</li>
+            <li>Used Markov models and biased randomness to imitate the artist's voice.</li>
+            <li>Written with OOP in mind to allow for improvements and refinements.</li>
+          </ul>
+          <div class="bg-blue fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+              </div>
+            </div>
+          </div>
+          <h3>Measures Tempo Time Converter <small> Musical Utility </small></h3>
+          <p> April 2012 | Visual Basic | Used for Music Sales Business </p>
+          <ul>
+            <li>Simple utility for converting between musical measures, tempo, and duration.</li>
+            <li>Available for the desktop on GitHub, and in beta on the Windows Store.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row cells4">
+        <div class="cell"> 
+          <div class="bg-green fg-white align-center">
+            <div class="section">
+              <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
+              </div>
+            </div>
+          </div><h3 align="right">Other Experience</h3> </div>
+          <div class="cell colspan3" align="left">
+            <div class="bg-green fg-white align-center">
+              <div class="section">
+                <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+                </div>
+              </div>
+            </div>
+            <h3>Independent <small> Music Composer and Artist</small></h3>
+            <p> April 2012 - Present | Fiverr.com </p>
+            <ul>
+              <li>Write, produce, and sell custom theme music for independent clients.</li>
+              <li>Communicate with clients to ensure buyer satisfaction and maintain excellent ratings.</li>
+              <li>Achieved ”Level 2” seller ranking in 2015 for consistently high ratings from buyers.</li>
+            </ul>
+            <div class="bg-green fg-white align-center">
+              <div class="section">
+                <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+                </div>
+              </div>
+            </div>
+            <h3>#flOCaml <small> Musical Tribute to OCaml</small></h3>
+            <p> December 2015 | Inspired by CS3110: Functional Programming </p>
+            <ul>
+              <li>Featured on the Inria OCaml listserv, and also seen on the OCaml Reddit.</li>
+              <li>Went viral at Cornell after a live performance for CS 3110's final lecture.</li>
+            </ul>
+            <div class="bg-green fg-white align-center">
+              <div class="section">
+                <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+                </div>
+              </div>
+            </div>
+            <h3>CU Cyphers: Hip-Hop Club <small> Vice President </small></h3>
+            <p> August 2015 - Present </p>
+            <ul>
+              <li>Work with the executive board to manage the club's recruiting, coordinate activities, budget for materials, and organize meetings.</li>
+            </ul>
+            <div class="bg-green fg-white align-center">
+              <div class="section">
+                <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+                </div>
+              </div>
+            </div>
+            <h3>Cornell Lunatic - Humor Magazine <small> Writer</small></h3>
+            <p> August 2014 - Present </p>
+            <ul>
+              <li>Coordinated with other staff members to redesign the official <a href="http://www.cornelllunatic.com" target="_blank"> website</a>.</li>
+            </ul>
+          </div>
+          <div class="row cells4">
+            <div class="cell"> 
+              <div class="bg-orange fg-white align-center">
+                <div class="section">
+                  <div class="no-overflow" style="padding-top: 5px; padding-bottom: 5px">
+                  </div>
+                </div>
+              </div><h3 align="right">Skills</h3> </div>
+              <div class="cell colspan3" align="left">
+                <div class="bg-orange fg-white align-center">
+                  <div class="section">
+                    <div class="no-overflow" style="padding-top: 2px; padding-bottom: 2px">
+                    </div>
+                  </div>
+                </div>
+                <h3>Technical <small> MATLAB | OCaml | Java | Python | LaTeX | Git | ROS | Visual Basic </small></h3>
+                <h3>Music <small> Sibelius | MuseScore | Audacity | Linux MultiMedia Studio | Pro Tools </small></h3>
+                <h3>Languages <small> Native English | Conversational Spanish </small></h3>
+
+              </div>
+          </div>
+      </div>
+    </div>
   </div>
-</html>
+</div>

@@ -20,30 +20,30 @@ function showCharm(id){
 
   </head>
   <title>Home | Jared Wong</title>
-  <div class="app-bar fixed-top"style="background-color:darkGray">
-    <ul class="app-bar-menu" style="background-color:darkGray">
-      <li><a href="index.html">Home</a></li>
+  <div id="main_nav" class="app-bar fixed-top"style="background-color:darkGray">
+    <ul id="nav_buttons" class="app-bar-menu" style="background-color:darkGray">
+      <li><a href="" id="home">Home</a></li>
       <li>
-        <a href="/index.html" class="dropdown-toggle">Software</a>
+        <a href="" class="dropdown-toggle">Software</a>
         <ul class="d-menu" data-role="dropdown">
-          <li><a href="ClassTeX.html">ClassTeX</a></li>
-          <li><a href="Pitbull_Generator.html">Pitbull Generator</a></li>
-          <li><a href="#CAH">Cards Against OCaml</a></li>
-          <li><a href="MeasuresTempoTimeConverter.html">Measures Tempo Time Converter</a></li>
+          <li><a href="#" id="ClassTeX">ClassTeX</a></li>
+          <li><a href="#" id="Pitbull">Pitbull Generator</a></li>
+          <li><a href="#" id="CAH">Cards Against OCaml</a></li>
+          <li><a href="#" id="MTT">Measures Tempo Time Converter</a></li>
         </ul>
       </li>
       <li>
         <a href="" class="dropdown-toggle">Music</a>
         <ul class="d-menu" data-role="dropdown">
-          <li><a href="Arrangements.html">Arrangements</a></li>
-          <li><a href="Composition.html">Composition</a></li>
+          <li><a href="#" id="Arrangements">Arrangements</a></li>
+          <li><a href="#" id="Composition">Composition</a></li>
         </ul>
       </li>
       <li>
         <a href="" class="dropdown-toggle">About</a>
         <ul class="d-menu" data-role="dropdown">
-          <li><a href="Resume.html">Resume</a></li>
-          <li><a href="Experience.html">Experience</a></li>
+          <li><a href="#" id="Resume">Resume</a></li>
+          <li><a href="#" id="Experience">Experience</a></li>
         </ul>
       </li>
     </ul>
@@ -59,7 +59,7 @@ function showCharm(id){
     <div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
       <button class="button" onclick="showCharm('bottom')">Copyright Info</button>
     </div>
-    <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h1><span class="charm-closer"></span></div>
+    <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h1><span class="charm-closer"></span></div>
   </footer>
   <script type="text/javascript" src="js/primary.js"></script>
 
