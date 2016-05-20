@@ -42,24 +42,28 @@ $('#Composition').click(function(){
 function loadMain(){
   $('#main_page').load('main.html');
   changeBorderColor("darkGray");
+  document.title="Home | Jared Wong";
   window.scrollTo(0,0);
 }
 
 function loadCards(){
   $('#main_page').load('CardsAgainstOCaml.html');
   changeBorderColor("darkGreen");
+  document.title="CAH | Jared Wong";
   window.scrollTo(0,0);
 }
 
 function loadPitbull(){
   $('#main_page').load('Pitbull_Generator.html');
   changeBorderColor("darkGreen");
+  document.title="Pitbull Generator | Jared Wong"
   window.scrollTo(0,0);
 }
 
 function loadClassTeX(){
   $('#main_page').load('ClassTeX.html');
   changeBorderColor("darkGreen");
+  document.title = "ClassTeX | Jared Wong"
   window.scrollTo(0,0);
 }
 
@@ -67,30 +71,35 @@ function loadClassTeX(){
 function loadMTT(){
   $('#main_page').load('MeasuresTempoTimeConverter.html');
   changeBorderColor("darkGreen");
+  document.title = "MTT | Jared Wong";
   window.scrollTo(0,0);
 }
 
 function loadArrangements(){
   $('#main_page').load('Arrangements.html');
   changeBorderColor("darkBlue");
+  document.title = "Arrangements | Jared Wong"
   window.scrollTo(0,0);
 }
 
 function loadComposition(){
   $('#main_page').load('Composition.html');
   changeBorderColor("darkBlue");
+  document.title = "Composition | Jared Wong";
   window.scrollTo(0,0);
 }
 
 function loadResume(){
   $('#main_page').load('Resume.html');
   changeBorderColor("darkRed");
+  document.title = "Resume | Jared Wong";
   window.scrollTo(0,0);
 }
 
 function loadExperience(){
   $('#main_page').load('Experience.html');
   changeBorderColor("darkRed");
+  document.title = "Experience | Jared Wong";
   window.scrollTo(0,0);
 }
 
