@@ -65,7 +65,7 @@ function loadClassTeX(){
 
 
 function loadMTT(){
-  $('#main_page').load('MTT.html');
+  $('#main_page').load('MeasuresTempoTimeConverter.html');
   changeBorderColor("darkGreen");
   window.scrollTo(0,0);
 }
