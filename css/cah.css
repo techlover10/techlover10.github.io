@@ -25,6 +25,12 @@
 	padding-bottom: 40px;
 }
 
+.container-cah{
+  margin: auto;
+  max-width: 100%;
+  width:auto;
+}
+
 .dark{
 	background: transparent !important;
 	color:white;
