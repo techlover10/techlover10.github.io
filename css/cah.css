@@ -5,6 +5,7 @@
 }
 
 .cah-main h1{
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif !important;
 	display: block;
 	font-weight: bold;
 	font-size: 3rem;
@@ -13,6 +14,10 @@
 
 .cah-main p{
 	padding-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 1.42857143;
 }
 
 .container{
