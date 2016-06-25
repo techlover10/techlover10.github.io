@@ -23,6 +23,10 @@ $('#MTT').click(function(){
   loadMTT();
 });
 
+$('#GenerateEDM').click(function(){
+  loadGenerateEDM();
+});
+
 $('#Resume').click(function(){
   loadResume();
 });
@@ -64,6 +68,13 @@ function loadClassTeX(){
   $('#main_page').load('ClassTeX.html');
   changeBorderColor("darkGreen");
   document.title = "ClassTeX | Jared Wong"
+  window.scrollTo(0,0);
+}
+
+function loadGenerateEDM(){
+$('#main_page').load('EDMGen.html');
+changeBorderColor("darkGreen");
+document.title = "EDMGen | Jared Wong"
   window.scrollTo(0,0);
 }
 
