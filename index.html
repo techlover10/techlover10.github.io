@@ -18,8 +18,8 @@
 
     <link rel='icon' type='image/x-icon' href='favicon.ico' />
     <script>
-function showCharm(id){
-  var  charm = $("#"+id+"-charm").data("charm");
+function showHelpCharm(){
+  var  charm = $("#about-charm").data("charm");
   if (charm.element.data("opened") === true) {
     charm.close();
   } else {
@@ -68,9 +68,9 @@ function showCharm(id){
 
   <footer>
     <div class="bg-black fg-white align-center padding-top:20px padding-bottom:0px">
-      <button class="button" onclick="showCharm('bottom')">Copyright Info</button>
+      <button class="button" onclick="showHelpCharm()">Copyright Info</button>
     </div>
-    <div data-role="charm" data-position="bottom" id="bottom-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h1><span class="charm-closer"></span></div>
+    <div data-role="charm" data-position="bottom" id="about-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h1><span class="charm-closer"></span></div>
   </footer>
   <script type="text/javascript" src="js/primary.js"></script>
 
