@@ -9,6 +9,9 @@
     <link href="css/primary.css" rel="stylesheet">
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/metro/3.0.14/js/metro.min.js"></script>
+    <script src="js/signals.min.js"></script>
+    <script src="js/hasher.min.js"></script>
+    <script src="js/crossroads.min.js"></script>
 
 
     <link href="css/cah.css" rel="stylesheet">
@@ -29,29 +32,29 @@ function showCharm(id){
   <title>Home | Jared Wong</title>
   <div id="main_nav" class="app-bar fixed-top"style="background-color:darkGray">
     <ul id="nav_buttons" class="app-bar-menu" style="background-color:darkGray">
-      <li><a href="" id="home">Home</a></li>
+      <li><a href="#" id="home">Home</a></li>
       <li>
         <a href="" class="dropdown-toggle">Software</a>
         <ul class="d-menu" data-role="dropdown">
-          <li><a href="#" id="ClassTeX">ClassTeX</a></li>
-          <li><a href="#" id="Pitbull">Pitbull Generator</a></li>
-          <li><a href="#" id="CAH">Cards Against OCaml</a></li>
-          <li><a href="#" id="MTT">Measures Tempo Time Converter</a></li>
-          <li><a href="#" id="GenerateEDM">generateEDM</a></li>
+          <li><a href="#/ClassTeX" id="ClassTeX">ClassTeX</a></li>
+          <li><a href="#Pitbull" id="Pitbull">Pitbull Generator</a></li>
+          <li><a href="#CAH" id="CAH">Cards Against OCaml</a></li>
+          <li><a href="#MTT" id="MTT">Measures Tempo Time Converter</a></li>
+          <li><a href="#GenerateEDM" id="GenerateEDM">GenerateEDM</a></li>
         </ul>
       </li>
       <li>
         <a href="" class="dropdown-toggle">Music</a>
         <ul class="d-menu" data-role="dropdown">
-          <li><a href="#" id="Arrangements">Arrangements</a></li>
-          <li><a href="#" id="Composition">Composition</a></li>
+          <li><a href="#/Arrangements" id="Arrangements">Arrangements</a></li>
+          <li><a href="#/Composition" id="Composition">Composition</a></li>
         </ul>
       </li>
       <li>
         <a href="" class="dropdown-toggle">About</a>
         <ul class="d-menu" data-role="dropdown">
-          <li><a href="#" id="Resume">Resume</a></li>
-          <li><a href="#" id="Experience">Experience</a></li>
+          <li><a href="#/Resume" id="Resume">Resume</a></li>
+          <li><a href="#/Experience" id="Experience">Experience</a></li>
         </ul>
       </li>
     </ul>

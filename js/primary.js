@@ -1,47 +1,45 @@
+function handleChanges(newHash, oldhash){
+  switch(newHash){
+    case "":
+      loadMain();
+      break;
+    case "CAH":
+      loadCards();
+      break;
+    case "ClassTeX":
+      loadClassTeX();
+      break;
+    case "Pitbull":
+      loadPitbull();
+      break;
+    case "MTT":
+      loadMTT();
+      break;
+    case "GenerateEDM":
+      loadGenerateEDM();
+      break;
+    case "Resume":
+      loadResume();
+      break;
+    case "Experience":
+      loadExperience();
+      break;
+    case "Arrangements":
+      loadArrangements();
+      break;
+    case "Composition":
+      loadComposition();
+      break;
+  }
+}
+hasher.changed.add(handleChanges);
+hasher.initialized.add(handleChanges);
+hasher.init();
+
+
 $( document ).ready(function () {
-  console.log("test");
-  loadMain();
 });
 
-$('#home').click(function(){
-  loadMain();
-})
-
-$('#CAH').click(function(){
-  loadCards();
-});
-
-$('#ClassTeX').click(function(){
-  loadClassTeX();
-});
-
-$('#Pitbull').click(function(){
-  loadPitbull();
-});
-
-$('#MTT').click(function(){
-  loadMTT();
-});
-
-$('#GenerateEDM').click(function(){
-  loadGenerateEDM();
-});
-
-$('#Resume').click(function(){
-  loadResume();
-});
-
-$('#Experience').click(function(){
-  loadExperience();
-});
-
-$('#Arrangements').click(function(){
-  loadArrangements();
-});
-
-$('#Composition').click(function(){
-  loadComposition();
-});
 
 function loadMain(){
   $('#main_page').load('main.html');
