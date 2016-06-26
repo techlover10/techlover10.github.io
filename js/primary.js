@@ -32,12 +32,12 @@ function handleChanges(newHash, oldhash){
       break;
   }
 }
-hasher.changed.add(handleChanges);
-hasher.initialized.add(handleChanges);
-hasher.init();
 
 
 $( document ).ready(function () {
+hasher.changed.add(handleChanges);
+hasher.initialized.add(handleChanges);
+hasher.init();
 });
 
 
