@@ -38,7 +38,7 @@ function loadMaster(hashArr){
 }
 
 function changeBorderColor( color){
-  $('#main_nav').animate({backgroundColor: color}, 250);
-  $('#nav_buttons').animate({backgroundColor: color}, 250);
+  $('#main_nav').velocity({backgroundColor: color}, 250);
+  $('#nav_buttons').velocity({backgroundColor: color}, 250);
 }
 
