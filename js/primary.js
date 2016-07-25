@@ -31,8 +31,15 @@ if (!hasher.getHash()){
 }
 });
 
+function redisplay(){
+  $('#loadingCircle').velocity("fadeOut", { duration: 500 });
+  $('#main_page').velocity("fadeIn", { duration: 500 });
+}
+
 function loadMaster(hashArr){
-  $('#main_page').load(hashArr[1]+'.html');
+  $('#main_page').velocity("fadeOut", { duration: 500 });
+  $('#loadingCircle').velocity("fadeIn", { duration: 500});
+  $('#main_page').load(hashArr[1]+'.html', redisplay);
   hashArr[0] ? changeBorderColor(getColor(hashArr[0])) : changeBorderColor(homeCol);
   titleString = hashArr[1] + ' | Jared Wong';
   document.title= titleString.replace(/_/g, " "); 
