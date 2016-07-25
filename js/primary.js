@@ -31,9 +31,13 @@ if (!hasher.getHash()){
 }
 });
 
-function redisplay(){
+function finalDisplay(){
   $('#main_page').show;
   $('#loadingCircle').velocity("fadeOut", { duration: 500 });
+}
+
+function redisplay(){
+  $('#main_page').waitForImages(finalDisplay);
 }
 
 function loadMaster(hashArr){
