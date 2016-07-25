@@ -32,12 +32,12 @@ if (!hasher.getHash()){
 });
 
 function redisplay(){
+  $('#main_page').show;
   $('#loadingCircle').velocity("fadeOut", { duration: 500 });
-  $('#main_page').velocity("fadeIn", { duration: 500 });
 }
 
 function loadMaster(hashArr){
-  $('#main_page').velocity("fadeOut", { duration: 500 });
+  $('#main_page').hide;
   $('#loadingCircle').velocity("fadeIn", { duration: 500});
   $('#main_page').load(hashArr[1]+'.html', redisplay);
   hashArr[0] ? changeBorderColor(getColor(hashArr[0])) : changeBorderColor(homeCol);
