@@ -38,8 +38,10 @@ function redisplay(){
 
 function loadMaster(hashArr){
   $('#main_page').hide;
-  $('#loadingCircle').velocity("fadeIn", { duration: 500});
-  $('#main_page').load(hashArr[1]+'.html', redisplay);
+  var loadMasterHelper = function () {
+    $('#main_page').load(hashArr[1]+'.html', redisplay);
+  }
+  $('#loadingCircle').velocity("fadeIn", { duration: 500, complete: loadMasterHelper});
   hashArr[0] ? changeBorderColor(getColor(hashArr[0])) : changeBorderColor(homeCol);
   titleString = hashArr[1] + ' | Jared Wong';
   document.title= titleString.replace(/_/g, " "); 
