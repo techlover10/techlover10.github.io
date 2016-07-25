@@ -32,7 +32,7 @@ if (!hasher.getHash()){
 });
 
 function finalDisplay(){
-  $('#main_page').show;
+  $('#main_page').show();
   $('#loadingCircle').velocity("fadeOut", { duration: 500 });
 }
 
@@ -41,7 +41,7 @@ function redisplay(){
 }
 
 function loadMaster(hashArr){
-  $('#main_page').hide;
+  $('#main_page').hide();
   var loadMasterHelper = function () {
     $('#main_page').load(hashArr[1]+'.html', redisplay);
   }
