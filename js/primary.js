@@ -26,7 +26,9 @@ $( document ).ready(function () {
 hasher.changed.add(handleChanges);
 hasher.initialized.add(handleChanges);
 hasher.init();
-hasher.setHash('main/Home');
+if (!hasher.getHash()){
+  hasher.setHash('main/Home');
+}
 });
 
 function loadMaster(hashArr){
