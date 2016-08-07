@@ -8,3 +8,19 @@ a:active{
 a:focus{
   text-decoration: none;
 }
+
+.prettyButton{
+  font-size: 18px;
+  font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
+  display:block;
+  color: white;
+}
+
+.prettyButton:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+.prettyButton:visited{
+  color: white;
+}

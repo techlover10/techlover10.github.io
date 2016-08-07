@@ -57,3 +57,22 @@ function changeBorderColor( color){
   $('#nav_buttons').velocity({backgroundColor: color}, 250);
 }
 
+function loadPage(name){
+  //$('#title').velocity("fadeOut", {duration: 500});
+  $('#title').velocity("slideUp", { duration: 500 });
+  $('#infoExperience').load(name + '.html', calculateHeight);
+  function calculateHeight(){
+    var height = $('#infoExperience').height() + 100;
+    $('#mainExperience').velocity({height: height});
+    $('#infoExperience').velocity("fadeIn", { duration: 500});
+  }
+  $('#buttons').velocity({ left: 20});
+  $('#reset').velocity('fadeIn', {duration: 500});
+}
+
+function reset(){
+  $('#title').velocity("slideDown", {duration: 500});
+  $('#infoExperience').velocity("fadeOut", {duration: 200});
+  $('#reset').velocity('fadeOut', {duration: 500});
+  $('#mainExperience').velocity({height: 70});
+}
