@@ -1,11 +1,21 @@
-  <div class="page-content" align="center">
-    <body>
-
-      <div class="fg-white bg-black" style="padding-top:50px">
-        <img src="assets/mttlogo.png" style="padding:20px"></img>
-      </div>
-      <div class="section">
-        <p>Under construction.  Check back soon!</p>
-      </div>
-    </body>
-  </div>
+<script type='text/javascript' src="js/MTT.js"> </script>
+<div class="page-content" align="center">
+<body>
+<div class="fg-white bg-black" style="padding-top:50px">
+<img src="assets/mttlogo.png" style="padding:20px"></img>
+</div>
+<div class="section">
+<p>Available on the Windows Store, GitHub, and below as a web app!  (Website under construction, more soon!)</p>
+<div data-bind="MTTModel">
+<h4> Measures</h4>
+<input id="Measures" data-bind="value: measures" type="number" min="1" max="9999">
+<h4> Seconds</h4>
+<input id="Seconds" data-bind="value: seconds" type="number" min="1" max="9999">
+<h4> Tempo</h4>
+<input id="Tempo" data-bind="value: tempo" type="number" min="1" max="280">
+<h4>  Measure Count</h4>
+<input id="MeasureCount" data-bind="value: measureCount" type="number" min="1" max="16">
+</div>
+</div>
+</body>
+</div>
