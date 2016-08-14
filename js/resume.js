@@ -5,7 +5,7 @@ $( window ).resize(function () {
 
 function siteViewModel(){
   var self = this;
-  self.windowState = ko.observable();
+  self.windowState = ko.observable($(window).width() < PHONE_MODE ? "phone" : "normal");
   self.resumeAlign = ko.observable("right");
   self.calculateVal = ko.computed( function () {
       self.resumeAlign(self.windowState()=="phone" ? "left" : "right");
