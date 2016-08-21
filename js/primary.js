@@ -6,10 +6,10 @@ var homeCol = "#a9a9a9";
 var PHONE_MODE = 641; // threshold for phone display
 
 var colors = {
-about: aboutCol,
-       music: musicCol,
-       dev: devCol,
-       main: homeCol
+  about: aboutCol,
+  music: musicCol,
+  dev: devCol,
+  main: homeCol
 }
 
 function getColor(str){
@@ -24,13 +24,13 @@ function handleChanges(newHash, oldhash){
 
 
 $( document ).ready(function () {
-    hasher.changed.add(handleChanges);
-    hasher.initialized.add(handleChanges);
-    hasher.init();
-    if (!hasher.getHash()){
+  if (!hasher.getHash()){
     hasher.setHash('main/Home');
-    }
-    });
+  }
+  hasher.changed.add(handleChanges);
+  hasher.initialized.add(handleChanges);
+  hasher.init();
+});
 
 function finalDisplay(){
   $('#main_page').show();
