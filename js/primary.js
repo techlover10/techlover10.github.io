@@ -24,11 +24,11 @@ function handleChanges(newHash, oldhash){
 
 
 $( document ).ready(function () {
+  hasher.initialized.add(handleChanges);
   if (!hasher.getHash()){
     hasher.setHash('main/Home');
   }
   hasher.changed.add(handleChanges);
-  hasher.initialized.add(handleChanges);
   hasher.init();
 });
 
