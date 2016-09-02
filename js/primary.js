@@ -4,6 +4,7 @@ var musicCol = "#16499a";
 var devCol = "#128023";
 var homeCol = "#a9a9a9";
 var PHONE_MODE = 641; // threshold for phone display
+var ERROR_PAGE = "error.html";
 
 var colors = {
   about: aboutCol,
@@ -16,6 +17,12 @@ function getColor(str){
   return colors[str];
 }
 
+function doesResourceExist(url){
+  var http = new XMLHttpRequest();
+  http.open('HEAD', url, false);
+  http.send();
+  return http.status!=404;
+}
 
 function handleChanges(newHash, oldhash){
   x = newHash.split(/\//);
@@ -45,7 +52,8 @@ function redisplay(){
 function loadMaster(hashArr){
   $('#main_page').hide();
   var loadMasterHelper = function () {
-    $('#main_page').load(hashArr[1]+'.html', redisplay);
+    var resourceName = hashArr[1]+'.html';
+    $('#main_page').load((doesResourceExist(resourceName) ? resourceName : ERROR_PAGE), redisplay);
   }
   $('#loadingCircle').velocity("fadeIn", { duration: 500, complete: loadMasterHelper});
   hashArr[0] ? changeBorderColor(getColor(hashArr[0])) : changeBorderColor(homeCol);
