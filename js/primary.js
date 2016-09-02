@@ -24,12 +24,13 @@ function handleChanges(newHash, oldhash){
 
 
 $( document ).ready(function () {
-  hasher.initialized.add(handleChanges);
+  hasher.init();
+  hasher.changed.add(handleChanges);
   if (!hasher.getHash()){
     hasher.setHash('main/Home');
+  }else{
+    hasher.initialized.add(handleChanges);
   }
-  hasher.changed.add(handleChanges);
-  hasher.init();
 });
 
 function finalDisplay(){
