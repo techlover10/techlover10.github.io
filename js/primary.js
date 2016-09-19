@@ -25,8 +25,9 @@ function doesResourceExist(url){
 }
 
 function handleChanges(newHash, oldhash){
-  x = newHash.split(/\//);
-  loadMaster(x);
+  splitParams = newHash.split('?');
+  mainRoute = splitParams[0].split(/\//);
+  loadMaster(mainRoute, splitParams[1]);
 }
 
 
@@ -49,10 +50,10 @@ function redisplay(){
   $('#main_page').waitForImages(finalDisplay);
 }
 
-function loadMaster(hashArr){
+function loadMaster(hashArr, optionalArgs){
   $('#main_page').hide();
   var loadMasterHelper = function () {
-    var resourceName = hashArr[1]+'.html';
+    var resourceName = 'templates/' + hashArr[1]+'.html';
     $('#main_page').load((doesResourceExist(resourceName) ? resourceName : ERROR_PAGE), redisplay);
   }
   $('#loadingCircle').velocity("fadeIn", { duration: 500, complete: loadMasterHelper});
@@ -60,6 +61,9 @@ function loadMaster(hashArr){
   titleString = hashArr[1] + ' | Jared Wong';
   document.title= titleString.replace(/_/g, " "); 
   window.scrollTo(0,0);
+    if (optionalArgs){
+      loadPage(optionalArgs);
+    };
 }
 
 function changeBorderColor( color){
@@ -70,7 +74,7 @@ function changeBorderColor( color){
 function loadPage(name){
   //$('#title').velocity("fadeOut", {duration: 500});
   $('#title').velocity("slideUp", { duration: 500 });
-  $('#infoExperience').load(name + '.html', calculateHeight);
+  $('#infoExperience').load('templates/' + name + '.html', calculateHeight);
   function calculateHeight(){
     var height = $('#infoExperience').height() + 100;
     $('#mainExperience').velocity({height: height});
