@@ -4,7 +4,7 @@ var musicCol = "#16499a";
 var devCol = "#128023";
 var homeCol = "#a9a9a9";
 var PHONE_MODE = 641; // threshold for phone display
-var ERROR_PAGE = "error.html";
+var ERROR_PAGE = "templates/error.html";
 
 var colors = {
   about: aboutCol,
