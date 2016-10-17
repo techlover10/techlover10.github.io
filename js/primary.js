@@ -84,6 +84,17 @@ function loadPage(name){
   $('#reset').velocity('fadeIn', {duration: 500});
 }
 
+function loadUpperDiv(name){
+  //$('#title').velocity("fadeOut", {duration: 500});
+  $('#hamburger').velocity("slideDown", { duration: 500 });
+  function calculateHeight(){
+    var height = $('#hamburger').height() + 100;
+    $('#mainPage').velocity({height: height});
+  }
+  $('#buttons').velocity({ left: 20});
+  $('#reset').velocity('fadeIn', {duration: 500});
+}
+
 function reset(){
   $('#title').velocity("slideDown", {duration: 500});
   $('#infoExperience').velocity("fadeOut", {duration: 200});
