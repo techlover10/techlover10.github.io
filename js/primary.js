@@ -5,6 +5,10 @@ var devCol = "#128023";
 var homeCol = "#a9a9a9";
 var PHONE_MODE = 641; // threshold for phone display
 var ERROR_PAGE = "templates/error.html";
+var CIRC_DURATION = 300;
+var FADE_SLIDE_DURATION = 500;
+var FADE_OUT_DURATION = 200;
+var COLOR_CHANGE_DURATION = 250;
 
 var colors = {
   about: aboutCol,
@@ -43,7 +47,7 @@ $( document ).ready(function () {
 
 function finalDisplay(){
   $('#main_page').show();
-  $('#loadingCircle').velocity("fadeOut", { duration: 500 });
+  $('#loadingCircle').velocity("fadeOut", { duration: CIRC_DURATION });
 }
 
 function redisplay(){
@@ -56,7 +60,7 @@ function loadMaster(hashArr, optionalArgs){
     var resourceName = 'templates/' + hashArr[1]+'.html';
     $('#main_page').load((doesResourceExist(resourceName) ? resourceName : ERROR_PAGE), redisplay);
   }
-  $('#loadingCircle').velocity("fadeIn", { duration: 500, complete: loadMasterHelper});
+  $('#loadingCircle').velocity("fadeIn", { duration: CIRC_DURATION, complete: loadMasterHelper});
   hashArr[0] ? changeBorderColor(getColor(hashArr[0])) : changeBorderColor(homeCol);
   titleString = hashArr[1] + ' | Jared Wong';
   document.title= titleString.replace(/_/g, " "); 
@@ -67,38 +71,38 @@ function loadMaster(hashArr, optionalArgs){
 }
 
 function changeBorderColor( color){
-  $('#main_nav').velocity({backgroundColor: color}, 250);
-  $('#nav_buttons').velocity({backgroundColor: color}, 250);
+  $('#main_nav').velocity({backgroundColor: color}, FADE_OUT_DURATION);
+  $('#nav_buttons').velocity({backgroundColor: color}, FADE_OUT_DURATION);
 }
 
 function loadPage(name){
   //$('#title').velocity("fadeOut", {duration: 500});
-  $('#title').velocity("slideUp", { duration: 500 });
+  $('#title').velocity("slideUp", { duration: FADE_SLIDE_DURATION });
   $('#infoExperience').load('templates/' + name + '.html', calculateHeight);
   function calculateHeight(){
     var height = $('#infoExperience').height() + 100;
     $('#mainExperience').velocity({height: height});
-    $('#infoExperience').velocity("fadeIn", { duration: 500});
+    $('#infoExperience').velocity("fadeIn", { duration: FADE_SLIDE_DURATION});
   }
   $('#buttons').velocity({ left: 20});
-  $('#reset').velocity('fadeIn', {duration: 500});
+  $('#reset').velocity('fadeIn', {duration: FADE_SLIDE_DURATION});
 }
 
 function loadUpperDiv(name){
   //$('#title').velocity("fadeOut", {duration: 500});
-  $('#hamburger').velocity("slideDown", { duration: 500 });
+  $('#hamburger').velocity("slideDown", { duration: FADE_SLIDE_DURATION });
   function calculateHeight(){
     var height = $('#hamburger').height() + 100;
     $('#mainPage').velocity({height: height});
   }
   $('#buttons').velocity({ left: 20});
-  $('#reset').velocity('fadeIn', {duration: 500});
+  $('#reset').velocity('fadeIn', {duration: FADE_SLIDE_DURATION});
 }
 
 function reset(){
-  $('#title').velocity("slideDown", {duration: 500});
-  $('#infoExperience').velocity("fadeOut", {duration: 200});
-  $('#reset').velocity('fadeOut', {duration: 500});
+  $('#title').velocity("slideDown", {duration: FADE_SLIDE_DURATION});
+  $('#infoExperience').velocity("fadeOut", {duration: FADE_OUT_DURATION});
+  $('#reset').velocity('fadeOut', {duration: FADE_SLIDE_DURATION});
   $('#mainExperience').velocity({height: 70});
 }
 
