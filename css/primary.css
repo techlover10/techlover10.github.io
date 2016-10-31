@@ -9,6 +9,13 @@ a:focus{
   text-decoration: none;
 }
 
+.prettyButtonSmall{
+  font-size: 13px;
+  font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
+  display:block;
+  color: black;
+  cursor: pointer;
+}
 .prettyButton{
   font-size: 18px;
   font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
@@ -20,6 +27,11 @@ a:focus{
 .prettyButton:hover{
   text-decoration: underline;
   color: white;
+}
+
+.prettyButtonSmall:hover{
+  text-decoration: underline;
+  color: black;
 }
 
 .prettyButton:visited{

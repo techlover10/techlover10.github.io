@@ -1,4 +1,5 @@
 <script type='text/javascript' src="js/dynamicTitle.js"> </script>
+<script type='text/javascript' src="js/activeResume.js"> </script>
 <div class="page-content" align="center"style="padding-top: 50px">
   <div class="bg-white fg-black align-center">
     <div class="no-overflow" style="align-center padding-top: 20px; padding-bottom: 10px">
@@ -25,7 +26,10 @@
           </div>
           <h3>Cornell University <small> BA in Computer Science | 3.83 GPA</small></h3>
           <p> Expected May 2017 | Ithaca, NY </p>
-          <h5>Coursework</h5>
+          <h5>Coursework</h5> 
+          <a id="showCourses" class="prettyButtonSmall" onClick="showHideCourses()">Show Courses ⇩</a>
+        <div id="coursesList" style="overflow:hidden; height:0px">
+            <div id="internalList">
           <ul>
             <li>Functional Programming</li>
             <li>Systems Programming</li>
@@ -42,6 +46,8 @@
             <li>Intermediate Spanish Composition and Conversation II</li>
             <li>Physics of Musical Sound</li>
           </ul>
+            </div>
+          </div>
           <h5>Honors/Awards</h5>
           <p> Arts and Sciences Dean's List (multiple semesters)</p>
           <div class="bg-red fg-white align-center">
