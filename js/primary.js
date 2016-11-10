@@ -29,20 +29,14 @@ function doesResourceExist(url){
 }
 
 function handleChanges(newHash, oldhash){
-  splitParams = newHash.split('?');
-  mainRoute = splitParams[0].split(/\//);
-  loadMaster(mainRoute, splitParams[1]);
+  crossroads.parse(newHash);
 }
 
 
 $( document ).ready(function () {
   hasher.init();
   hasher.changed.add(handleChanges);
-  if (!hasher.getHash()){
-    hasher.setHash('main/Home');
-  }else{
-    hasher.initialized.add(handleChanges);
-  }
+  hasher.initialized.add(handleChanges);
 });
 
 function finalDisplay(){
@@ -105,4 +99,21 @@ function reset(){
   $('#reset').velocity('fadeOut', {duration: FADE_SLIDE_DURATION});
   $('#mainExperience').velocity({height: 70});
 }
+
+// Crossroads routing
+var devRoute = crossroads.addRoute('/dev/{id}', function (id){
+  loadMaster(['dev', id]);
+});
+
+var musicRoute = crossroads.addRoute('/music/{id}', function (id){
+  loadMaster(['music', id]);
+});
+
+var aboutRoute = crossroads.addRoute('/about/{id}', function (id){
+  loadMaster(['about', id]);
+});
+
+var emptyRoute = crossroads.addRoute('/', function (){
+  loadMaster(['main', 'Home']);
+});
 
