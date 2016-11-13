@@ -1,6 +1,6 @@
 var IS_HIDDEN = true;
-var HIDDEN_TEXT = "Show Courses ⇩";
-var SHOWN_TEXT = "Hide Courses ⇧";
+var HIDDEN_TEXT = "Show Courses ▼";
+var SHOWN_TEXT = "Hide Courses ▲";
 
 function showHideCourses () {
   if (IS_HIDDEN){
