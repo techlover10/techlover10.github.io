@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/metro/3.0.14/css/metro.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/metro/3.0.14/css/metro-responsive.min.css" rel="stylesheet">
     <link href="css/primary.css" rel="stylesheet">
@@ -33,8 +33,8 @@ function showHelpCharm(){
 
   </head>
   <title>Home | Jared Wong</title>
-  <div id="main_nav" class="app-bar fixed-top"style="background-color:darkGray">
-    <ul id="nav_buttons" class="app-bar-menu" style="background-color:darkGray">
+  <header id="main_nav" class="app-bar fixed-top"style="background-color:darkGray" data-role="appbar">
+    <ul id="nav_buttons" class="app-bar-menu small-dropdown" style="background-color:darkGray">
       <li><a href="#/" id="home">Home</a></li>
       <li>
         <a href="" class="dropdown-toggle">Software</a>
@@ -58,8 +58,8 @@ function showHelpCharm(){
         </ul>
       </li>
     </ul>
-    <div id="hamburger" class="app-bar-pullbutton automatic" style="display: none"></div>
-  </div>
+    <div id="hamburger" class="app-bar-pullbutton automatic" style="display: none; background-color: grey"></div>
+  </header>
     <div data-role="charm" data-position="bottom" id="about-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;" onClick="showHelpCharm()"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h1><span class="charm-closer"></span></div>
  
   <body>
