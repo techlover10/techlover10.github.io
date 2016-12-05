@@ -4,7 +4,7 @@ var SHOWN_TEXT = "Hide Courses ▲";
 
 function showHideCourses () {
   if (IS_HIDDEN){
-    var courseList = $("#internalList").height();
+    var courseList = $("#internalList").height() + 10;
     $( "#coursesList").velocity({height: courseList});
     $( "#showCourses").text(SHOWN_TEXT);
     IS_HIDDEN = false;
