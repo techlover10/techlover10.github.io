@@ -67,6 +67,7 @@ function loadMaster(hashArr, optionalArgs){
 function changeBorderColor( color){
     $('#main_nav').velocity({backgroundColor: color}, FADE_OUT_DURATION);
     $('#nav_buttons').velocity({backgroundColor: color}, FADE_OUT_DURATION);
+    $('#hamburger').velocity({backgroundColor: color}, FADE_OUT_DURATION);
 }
 
 function loadPage(name){
