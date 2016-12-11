@@ -51,6 +51,12 @@ div.beatsBkgd{
     width: 100%;
 }
 
+div.swaggerBkgd{
+    padding-bottom:17.1%;
+    width: 100%;
+}
+
+
 @media screen and (max-width: 800px){
     .headerStyle{
         margin:.625rem;
