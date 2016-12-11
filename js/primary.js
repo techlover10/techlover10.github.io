@@ -118,3 +118,11 @@ var emptyRoute = crossroads.addRoute('/', function (){
     loadMaster(['main', 'Home']);
 });
 
+var errorRoute1 = crossroads.addRoute('/{err}', function (){
+    loadMaster(['main', 'ERROR']);
+});
+
+var errorRoute1 = crossroads.addRoute('/{err1}/{err2}', function (){
+    loadMaster(['main', 'ERROR']);
+});
+
