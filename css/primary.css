@@ -45,6 +45,12 @@ a:focus{
 .headerStyle{
     margin:0px;
 }
+
+div.beatsBkgd{
+    padding-bottom:22%;
+    width: 100%;
+}
+
 @media screen and (max-width: 800px){
     .headerStyle{
         margin:.625rem;
