@@ -10,6 +10,15 @@ var FADE_SLIDE_DURATION = 500;
 var FADE_OUT_DURATION = 200;
 var COLOR_CHANGE_DURATION = 250;
 
+function showHelpCharm(){
+  var  charm = $("#about-charm").data("charm");
+  if (charm.element.data("opened") === true) {
+    charm.close();
+  } else {
+    charm.open();
+  }
+}
+
 var colors = {
     about: aboutCol,
     music: musicCol,
