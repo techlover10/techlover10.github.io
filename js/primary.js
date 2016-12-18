@@ -13,7 +13,7 @@ var COLOR_CHANGE_DURATION = 250;
 // Perfect scrollbar
 $('.mainPage').perfectScrollbar();
 window.onresize = function(event) {
-    $('.mainPage').css({'height': $(window).height() - 55});
+    $('.mainPage').css({'height': $(window).height()});
 }
 
 function showHelpCharm(){
@@ -78,7 +78,7 @@ function loadMaster(hashArr, optionalArgs){
     if (optionalArgs){
         loadPage(optionalArgs);
     };
-    $('.mainPage').css({'height': $(window).height() - 55});
+    $('.mainPage').css({'height': $(window).height()});
 }
 
 function changeBorderColor( color){
@@ -98,7 +98,7 @@ function loadPage(name){
     }
     $('#buttons').velocity({ left: 20});
     $('#reset').velocity('fadeIn', {duration: FADE_SLIDE_DURATION});
-    $('.mainPage').css({'height': $(window).height() - 55});
+    $('.mainPage').css({'height': $(window).height()});
 }
 
 function loadUpperDiv(name){
