@@ -9,6 +9,17 @@ a:focus{
   text-decoration: none;
 }
 
+.mainPage{
+    width: 100%;
+    margin: 0px auto 0 auto;
+    position: relative;
+    overflow: auto;
+}
+
+/*.content {
+  width: 1280px;
+  height: 720px;
+}*/
 .prettyButtonSmall{
   font-size: 13px;
   font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
