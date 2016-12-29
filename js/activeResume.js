@@ -12,7 +12,7 @@ function toggle_is_hidden(id){
 }
 
 function get_hidden (id) {
-    return (id=="cs" ? "Show Computer Science Courses ▼" : "Show Other Courses ▼");
+    return (id=="cs" ? "Show Computer Science Courses ▼" : "Show Other Courses ▲");
 }
 
 function get_shown (id) {
