@@ -21,11 +21,13 @@ a:focus{
   height: 720px;
 }*/
 .prettyButtonSmall{
-  font-size: 13px;
+  font-size: 0.8rem;
   font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
   display:block;
   color: black;
   cursor: pointer;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   /*padding-left: 9px;
   padding-right: 9px;
   padding-top: 3px;
@@ -71,7 +73,7 @@ div.swaggerBkgd{
 
 @media screen and (max-width: 800px){
     .headerStyle{
-        margin:.625rem;
+        margin-left:.625rem;
     }
 }
 .secTitle{

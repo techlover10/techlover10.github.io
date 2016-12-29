@@ -1,16 +1,20 @@
 var IS_HIDDEN = true;
-var HIDDEN_TEXT = "Show Courses ▼";
-var SHOWN_TEXT = "Hide Courses ▲";
+function get_hidden (id) {
+    return (id=="cs" ? "Show Computer Science Courses ▼" : "Show Other Courses ▼");
+}
+function get_shown (id) {
+    return (id=="cs" ? "Hide Computer Science Courses ▼" : "Hide Other Courses ▼");
+}
 
-function showHideCourses () {
+function showHideCourses (id) {
   if (IS_HIDDEN){
-    var courseList = $("#internalList").height() + 15;
-    $( "#coursesList").velocity({height: courseList});
-    $( "#showCourses").text(SHOWN_TEXT);
+    var courseList = $("#" + id + "InternalList").height() + 15;
+    $( "#" + id + "List").velocity({height: courseList});
+    $( "#" + id + "ShowCourses").text(get_shown(id));
     IS_HIDDEN = false;
   } else {
-    $( "#coursesList").velocity({height:0});
-    $( "#showCourses").text(HIDDEN_TEXT);
+    $( "#" + id + "List").velocity({height:0});
+    $( "#" + id + "ShowCourses").text(get_hidden(id));
     IS_HIDDEN = true;
   }
 };
