@@ -16,7 +16,7 @@ function get_hidden (id) {
 }
 
 function get_shown (id) {
-    return (id=="cs" ? "Hide Computer Science Courses ▼" : "Hide Other Courses ▼");
+    return (id=="cs" ? "Hide Computer Science Courses ▼" : "Hide Other Courses ▲");
 }
 
 function showHideCourses (id) {
