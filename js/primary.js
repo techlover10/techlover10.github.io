@@ -57,6 +57,7 @@ $( document ).ready(function () {
 
 function finalDisplay(){
     $('#main_page').show();
+    $('#masterContainer').scrollTop(0);
     $('#loadingCircle').velocity("fadeOut", { duration: CIRC_DURATION });
 }
 
