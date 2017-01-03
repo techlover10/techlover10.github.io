@@ -81,6 +81,11 @@ div.swaggerBkgd{
 
 
 @media screen and (max-width: 800px){
+    .widescreen{
+        width: 70vw;
+        height: 39.375vw;
+    }
+
     .headerStyle{
         margin-left:.625rem;
     }
@@ -89,6 +94,12 @@ div.swaggerBkgd{
     text-align: right;
 }
 @media screen and (max-width: 640px){
+
+    .widescreen{
+        width: 80vw;
+        height: 45vw;
+    }
+
     .secTitle{
         text-align: center;
     }
