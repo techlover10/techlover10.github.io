@@ -59,6 +59,15 @@ a:focus{
     margin:0px;
 }
 
+.widescreen{
+    width: 50vw;
+    height: 28.125vw;
+}
+
+div.widescreen{
+    padding-bottom:56.25%;
+    width: 100%;
+}
 div.beatsBkgd{
     padding-bottom:22%;
     width: 100%;
@@ -83,4 +92,14 @@ div.swaggerBkgd{
     .secTitle{
         text-align: center;
     }
+}
+
+p.experienceParagraph{
+    line-height: 22px;
+    font-size: 15px;
+}
+
+p.fancyParagraph{
+    line-height:24px;
+    font-size:17px;
 }
