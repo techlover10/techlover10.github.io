@@ -16,6 +16,10 @@ a:focus{
     overflow: auto;
 }
 
+.carousel {
+    min-height: 100%;
+}
+
 /*.content {
   width: 1280px;
   height: 720px;
@@ -68,6 +72,7 @@ div.widescreen{
     padding-bottom:56.25%;
     width: 100%;
 }
+
 div.beatsBkgd{
     padding-bottom:22%;
     width: 100%;
@@ -75,6 +80,11 @@ div.beatsBkgd{
 
 div.swaggerBkgd{
     padding-bottom:17.1%;
+    width: 100%;
+}
+
+div.paperRatio{
+    padding-bottom :129.41%;
     width: 100%;
 }
 
