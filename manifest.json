@@ -1,0 +1,12 @@
+{
+  "manifest_version": 1,
+  "name": "Jared Wong's Site",
+  "version": "v1.0",
+  "default_locale": "en",
+  "description": "My personal homepage.",
+  "short_name": "Jared's Homepage",
+  "start_url": "https://techlover10.github.io",
+  "background_color": "white",
+  "theme_color": "gray",
+  "display": "standalone"
+}
