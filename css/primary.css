@@ -1,12 +1,16 @@
 a:hover{
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:active{
-  text-decoration: none;
+    text-decoration: none;
 }
 a:focus{
-  text-decoration: none;
+    text-decoration: none;
+}
+
+br.smallBreak{
+    display: none;
 }
 
 .mainPage{
@@ -21,42 +25,42 @@ a:focus{
 }
 
 /*.content {
-  width: 1280px;
-  height: 720px;
+width: 1280px;
+height: 720px;
 }*/
-.prettyButtonSmall{
-  font-size: 0.8rem;
-  font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
-  display:block;
-  color: black;
-  cursor: pointer;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  /*padding-left: 9px;
-  padding-right: 9px;
-  padding-top: 3px;
-  padding-bottom: 3px;*/
+    .prettyButtonSmall{
+        font-size: 0.8rem;
+        font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
+        display:block;
+        color: black;
+        cursor: pointer;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        /*padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 3px;
+        padding-bottom: 3px;*/
 }
 .prettyButton{
-  font-size: 18px;
-  font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
-  display:block;
-  color: white;
-  cursor: pointer;
+    font-size: 18px;
+    font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
+    display:block;
+    color: white;
+    cursor: pointer;
 }
 
 .prettyButton:hover{
-  text-decoration: underline;
-  color: white;
+    text-decoration: underline;
+    color: white;
 }
 
 .prettyButtonSmall:hover{
-  text-decoration: underline;
-  color: black;
+    text-decoration: underline;
+    color: black;
 }
 
 .prettyButton:visited{
-  color: white;
+    color: white;
 }
 
 .headerStyle{
@@ -112,6 +116,13 @@ div.paperRatio{
 
     .secTitle{
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    br.smallBreak{
+        display: block;
     }
 }
 
