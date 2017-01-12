@@ -21,7 +21,7 @@ function get_shown (id) {
 
 function showHideCourses (id) {
   if (get_is_hidden(id)){
-    var courseList = $("#" + id + "InternalList").height() + 15;
+    var courseList = $("#" + id + "InternalList").height();
     $( "#" + id + "List").velocity({height: courseList});
     $( "#" + id + "ShowCourses").text(get_shown(id));
   } else {

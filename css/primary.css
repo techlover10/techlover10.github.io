@@ -24,6 +24,11 @@ br.smallBreak{
     min-height: 100%;
 }
 
+.courseList ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 /*.content {
 width: 1280px;
 height: 720px;
