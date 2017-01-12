@@ -129,6 +129,9 @@ div.paperRatio{
     br.smallBreak{
         display: block;
     }
+    span.smallHide{
+        display: none;
+    }
 }
 
 p.experienceParagraph{
