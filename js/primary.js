@@ -10,6 +10,9 @@ var FADE_SLIDE_DURATION = 500;
 var FADE_OUT_DURATION = 200;
 var COLOR_CHANGE_DURATION = 250;
 
+// Setting for optional args
+var OPTIONAL_ARGS = "";
+
 // Perfect scrollbar unless mobile
 if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
     // Load perfect scrollbar plugin
@@ -37,7 +40,7 @@ var colors = {
 }
 
 function getColor(str){
-    return colors[str];
+    return colors[str] || homeCol;
 }
 
 function doesResourceExist(url){
@@ -68,7 +71,7 @@ function redisplay(){
     $('#main_page').waitForImages(finalDisplay);
 }
 
-function loadMaster(hashArr, optionalArgs){
+function loadMaster(hashArr, optArgs){
     $('#main_page').hide();
     var loadMasterHelper = function () {
         var resourceName = 'templates/' + hashArr[1]+'.html';
@@ -79,9 +82,7 @@ function loadMaster(hashArr, optionalArgs){
     titleString = hashArr[1] + ' | Jared Wong';
     document.title= titleString.replace(/_/g, " "); 
     window.scrollTo(0,0);
-    if (optionalArgs){
-        loadPage(optionalArgs);
-    };
+    OPTIONAL_ARGS = optArgs || "";
     $('.mainPage').css({'height': $(window).height()});
 }
 
@@ -124,16 +125,12 @@ function reset(){
 }
 
 // Crossroads routing
-var devRoute = crossroads.addRoute('/dev/{id}', function (id){
-    loadMaster(['dev', id]);
+var mainRoute = crossroads.addRoute('/{section}/{id}', function (section, id){
+    loadMaster([section, id]);
 });
 
-var musicRoute = crossroads.addRoute('/music/{id}', function (id){
-    loadMaster(['music', id]);
-});
-
-var aboutRoute = crossroads.addRoute('/about/{id}', function (id){
-    loadMaster(['about', id]);
+var mainRouteOpt = crossroads.addRoute('/{section}/{id}{?subsection}', function (section, id, subsection){
+    loadMaster([section, id], subsection);
 });
 
 var emptyRoute = crossroads.addRoute('/', function (){
@@ -141,10 +138,6 @@ var emptyRoute = crossroads.addRoute('/', function (){
 });
 
 var errorRoute1 = crossroads.addRoute('/{err}', function (){
-    loadMaster(['main', 'ERROR']);
-});
-
-var errorRoute1 = crossroads.addRoute('/{err1}/{err2}', function (){
     loadMaster(['main', 'ERROR']);
 });
 
