@@ -51,6 +51,15 @@ function doesResourceExist(url){
 }
 
 function handleChanges(newHash, oldhash){
+    if (oldhash && newHash.split('?')[0] == oldhash.split('?')[0]){
+        newArgsArr = newHash.split('?');
+        if (newArgsArr.length > 1 && newArgsArr[1].split('=')[1]){
+            loadPage(newArgsArr[1].split('=')[1]);
+        } else {
+            reset()
+        }
+        return;
+    }
     crossroads.parse(newHash);
 }
 
