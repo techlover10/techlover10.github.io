@@ -13,14 +13,29 @@ var COLOR_CHANGE_DURATION = 250;
 // Setting for optional args
 var OPTIONAL_ARGS = "";
 
-// Perfect scrollbar unless mobile
-if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
+// Check for touch device
+function isTouch() {
+  return 'ontouchstart' in window        // works on most browsers 
+      || 'onmsgesturechange' in window;  // works on IE10 with some false positives
+};
+
+// Perfect scrollbar unless touchscreen
+if (!isTouch()) {
     // Load perfect scrollbar plugin
     $('.mainPage').perfectScrollbar();
     window.onresize = function(event) {
         $('.mainPage').css({'height': $(window).height()});
     }
 }
+
+//// Perfect scrollbar unless mobile
+//if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
+//    // Load perfect scrollbar plugin
+//    $('.mainPage').perfectScrollbar();
+//    window.onresize = function(event) {
+//        $('.mainPage').css({'height': $(window).height()});
+//    }
+//}
 
 function showHelpCharm(){
 
