@@ -1,0 +1,1 @@
+var ANIM_DELAY = 1500;
