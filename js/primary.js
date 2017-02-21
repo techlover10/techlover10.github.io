@@ -1,17 +1,8 @@
-//Color defs from Metro CSS for different page categories
-var aboutCol = "#9a1616";
-var musicCol = "#16499a";
-var devCol = "#128023";
-var homeCol = "#a9a9a9";
-var PHONE_MODE = 641; // threshold for phone display
-var ERROR_PAGE = "templates/error.html";
-var CIRC_DURATION = 300;
-var FADE_SLIDE_DURATION = 500;
-var FADE_OUT_DURATION = 200;
-var COLOR_CHANGE_DURATION = 250;
-
 // Setting for optional args
 var OPTIONAL_ARGS = "";
+
+// Dict of loaded pages
+var loadedPages = {};
 
 // Check for touch device
 function isTouch() {
@@ -101,7 +92,7 @@ function loadMaster(hashArr, optArgs){
         var resourceName = 'templates/' + hashArr[1]+'.html';
         $('#main_page').load((doesResourceExist(resourceName) ? resourceName : ERROR_PAGE), redisplay);
     }
-    $('#loadingCircle').velocity("fadeIn", { duration: CIRC_DURATION, complete: loadMasterHelper});
+    $('#loadingCircle').velocity("fadeIn", { duration: (!(hasLoadedBefore(hasher.getHash())) ? CIRC_DURATION : 0), complete: loadMasterHelper});
     hashArr[0] ? changeBorderColor(getColor(hashArr[0])) : changeBorderColor(homeCol);
     titleString = hashArr[1] + ' | Jared Wong';
     document.title= titleString.replace(/_/g, " "); 
@@ -146,6 +137,16 @@ function reset(){
     $('#infoExperience').velocity("fadeOut", {duration: FADE_OUT_DURATION});
     $('#reset').velocity('fadeOut', {duration: FADE_SLIDE_DURATION});
     $('#mainExperience').velocity({height: 70});
+}
+
+function hasLoadedBefore(){
+    if (loadedPages[hasher.getHash()]){
+        return true;
+    }
+    return false;
+}
+function setHasLoaded(){
+    loadedPages[hasher.getHash()] = true;
 }
 
 // Crossroads routing

@@ -1,9 +1,9 @@
-    <div class="no-overflow" style="background-image:url(assets/codebkgd.png); padding:30px; height:200px"></div>
+<div class="no-overflow" style="background-image:url(assets/codebkgd.png); padding:30px; height:200px"></div>
     <div class="bg-white fg-black align-center">
-      <div class="no-overflow mainTitleMaster" style="bg-lightGray fg-white align-center padding-top: 20px; padding-bottom: 10px">
+      <div class="no-overflow upAnimated" style="bg-lightGray fg-white align-center padding-top: 20px; padding-bottom: 10px">
         <h1 style="font-size: 40px; line-height: 1.2" class="text-shadow metro-title">Jared Wong</h1>
       </div>
-      <div class="bg-darkGray fg-white align-center subTitleMaster">
+      <div class="bg-darkGray fg-white align-center upAnimated">
         <div class="section">
           <div class="no-overflow" style="padding-top: 10px; padding-bottom: 10px">
             <small style="font-size: 25px; line-height: 0.7" class="metro-title">Coder, Composer, Consumer</small>
@@ -14,89 +14,35 @@
       <div style="margin:30px">
         <div class="flex-grid">
           <div class="row">
-            <div class="cell colspan6 bg-darkGreen about" style=" margin-bottom: 10px; padding:30px">
+            <div class="cell colspan6 bg-darkGreen rightAnimate" style=" margin-bottom: 10px; padding:30px">
               <h3 class="text-shadow fg-white">Who am I?</h3>
             </div>
-            <div class="cell colspan6 textElement" style="padding:10px">
+            <div class="cell colspan6 leftAnimate" style="padding:10px">
               <p style="font-size:15px">My name is Jared.  I am a third-year student at Cornell University pursuing a major in <a href="http://www.cs.cornell.edu"target="_blank" rel="noopener"> Computer Science </a> and a minor in <a href="http://www.cs.cornell.edu/ComputingArts/" target="_blank" rel="noopener">Computing in the Arts</a>.
               </p>
             </div>
           </div>
 
           <div class="row">
-            <div class="cell colspan6 bg-darkRed fg-white about" style="background-color:darkGray; padding:30px; margin-bottom: 10px">
+            <div class="cell colspan6 bg-darkRed fg-white rightAnimate" style="background-color:darkGray; padding:30px; margin-bottom: 10px">
               <h3 class="text-shadow">What do I do?</h3>
             </div>
-            <div class="cell colspan6 textElement" style="padding:10px">
+            <div class="cell colspan6 leftAnimate" style="padding:10px">
               <p style="font-size:15px">I <a href="https://github.com/techlover10/" target="_blank" rel="noopener"> write code</a>.  I <a href="https://www.youtube.com/rangerthearranger" target="_blank" rel="noopener"> arrange music</a>.  Occasionally, I even spit a verse (or a <a href="http://thenewstack.io/oh-caml-five-songs-programming/" target="_blank" rel="noopener"> few</a>).
               </p>
             </div>
           </div>
 
           <div class="row">
-            <div class="cell colspan6 bg-darkBlue fg-white about" style="background-color:lightGray; padding:30px; margin-bottom:10px">
+            <div class="cell colspan6 bg-darkBlue fg-white rightAnimate" style="background-color:lightGray; padding:30px; margin-bottom:10px">
               <h3 class="text-shadow">Why do I do it?</h3>
             </div>
-            <div class="cell colspan6 textElement" style="padding:10px">
+            <div class="cell colspan6 leftAnimate" style="padding:10px">
               <p style="font-size:15px">I enjoy creating.  I enjoy the process of developing ideas, working to create them, and seeing them brought to fruition.  I began studying Computer Science in the hopes of eventually finding work in music technology/software development, an area which blends both my passion for music and my love of all things digital.
               </p>
             </div>
           </div>
         </div>
       </div>
-
-      <script>
-var titleAnimation = anime({
-    targets: ['.mainTitleMaster', '.subTitleMaster'],
-    translateY: '20rem',
-    duration: 1,
-    loop: false,
-    complete: function (){
-    anime({
-targets: ['.mainTitleMaster', '.subTitleMaster'],
-translateY: '0rem',
-    delay: function(el, index){
-    return index*40;
-    },
-duration: ANIM_DELAY,
-loop: false
-});
-}
-});
-var colorsAimation = anime({
-    targets: ['.about'],
-    translateX: '100rem',
-    duration: 1,
-    loop: false,
-    complete: function (){
-    anime({
-targets: ['.about'],
-translateX: '0rem',
-    delay: function(el, index){
-    return index*40;
-    },
-duration: ANIM_DELAY,
-loop: false
-});
-}
-});
-var aboutAimation = anime({
-    targets: ['.textElement'],
-    translateX: '-100rem',
-    duration: 1,
-    loop: false,
-    complete: function (){
-    anime({
-targets: ['.textElement'],
-translateX: '0rem',
-    delay: function(el, index){
-    return index*40;
-    },
-borderRadius: '8px',
-duration: ANIM_DELAY,
-loop: false
-});
-}
-});
-      </script>
+      <script src="js/animations.js"></script>
 
