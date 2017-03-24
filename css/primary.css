@@ -13,6 +13,14 @@ br.smallBreak{
     display: none;
 }
 
+h3.subCapt{
+    margin: 0.625rem 0 0 0;
+}
+
+h4.posInfo{
+    margin: 0.3rem 0 0 0;
+}
+
 .mainPage{
     width: 100%;
     margin: 0px auto 0 auto;
