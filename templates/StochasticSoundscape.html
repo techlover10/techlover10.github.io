@@ -17,6 +17,60 @@
     <div style="padding-left: 15%; padding-right: 15%">
     <a href="https://github.com/techlover10/StochasticSoundscape" class="button"> StochasticSoundscape on Github! </a>
     </div>
+    <div class="grid" style="margin: 20px">
+        <div class="row cells2">
+            <div class="cell colspan1 leftAnimate" align="left"> 
+                <h2 align="center"> Background </h1>
+                <p class="fancyParagraph upAnimated">
+                Inspired by the process-driven music of <a href="https://en.wikipedia.org/wiki/Iannis_Xenakis"> Iannis Xenakis </a>, the algorithmic processes of <a href="http://annalindemann.com/"> Anna Lindemann's </a> biological process-driven music, and stochastic process in general, <i>Stochastic Soundscape</i> is a process-driven soundscape generation tool which creates endless, unique soundscapes based on a set of parameters and given source material.
+                </p>
+                <h2 align="center"> Usage </h2>
+                <p class="fancyParagraph upAnimated"> For usage information, hit the button at the top of the page to check out the code and try it yourself!</p>
+                <h2 align="center"> System Requirements </h2>
+                <p class="fancyParagraph upAnimated"> Currently, the software is written for Linux-based operating systems only.  With some slight modifications, it can be made to run on Windows; this is functionality which might be added in the future.  The following dependencies are also required:</p>
+                <ul>
+                    <li> Python 3.5 </li>
+                    <li> pydub </li>
+                    <li> scipy </li>
+                    <li> numpy </li>
+                    <li> wave </li>
+                    <li> Librosa </li>
+                    <li> ffmpeg </li>
+                </ul>
+                <p class="fancyParagraph upAnimated"> For more info, check out the <a href="https://github.com/techlover10/StochasticSoundscape/blob/master/README.md"> README on GitHub </a>
+                <h2 align="center"> Sample Generation </h2>
+                <p class="fancyParagraph upAnimated"> It is rather unlikely that users have a volume of samples that is sufficient for demonstrating what this program can do.  To generate samples, sample_clipper.py contains code that generates samples using the same onset or beat detection that is used for analysis.  This program, which does not interface with the main process of generating soundscapes, will clip given source material into samples which can then be classified and used for soundscape genration.
+            </div>
+            <div class="cell colspan1 rightAnimate" align="left"> 
+                <h2 align="center"> Process </h2>
+                <p class="fancyParagraph upAnimated"> Stochastic Soundscape uses two types of source material, structural and samples. Structural data is analyzed to generate the stochastic transition matrix from which the samples will be assembled. The basic idea behind the process is simple: first, <a href="https://github.com/librosa/librosa"> Librosa </a> is used to detect onsets (any sort of noticeable bump in the waveform of the sound) in the structural material.  The sound is then iterated through from onset to onset, and each sample is classified (see <b> Feature Analysis </b> for more info).  Ideally, the onset intervals will divide the soundscape into small sounds, although in practice sound is messy and this is not necessarily true.  Each time a snippet is analyzed, the transition between the previous classifier and the current one is logged into a <a href="https://github.com/techlover10/PyTransitionMatrix"> Markov transition matrix </a>.  The samples are classified using the same methodology as the structural source material.  Finally, a soundscape is assembled randomly, using transition probabilities from the structural material to choose sounds from the samples.</p>
+                <h2 align="center"> Feature Analysis </h2>
+                <h3 align="left"> Classification </h3>
+                <p class="fancyParagraph upAnimated"> Librosa includes various sound analysis functions, and Stochastic Soundscape uses many of them in its default method of classification.  A specific classification method can be chosen by specifying which type to run in the settings file (settings.py).</p>
+                <ul class="rightAnimated">
+                    <li> 'rolloff' analyzes sounds based on spectral rolloff, a feature
+                        which is based on how much energy is in which frequency ranges
+                        for the sound.
+                    </li>
+
+                    <li>
+                        'spectral_centroid' analyzes the "center of mass" of a sound,
+                        which reflects the "brightness" of the sound.
+                    </li>
+
+                    <li>
+                        'zero_crossing' measures the rate at which the sign of the 
+                        signal changes - that is, the rate at which the signal
+                        changes from positive to negative.
+                    </li>
+                </ul>
+                <h3 align="left"> Pulse Detection </h3>
+                <p class="fancyParagraph upAnimated"> As mentioned above, Stochastic Soundscape defaults to using onset detection as a method of defining snippet boundaries for analysis.  Another option is to use Librosa's "beat detection", which essentially performs onset detection with the addition of attempting to infer a tempo, and ultimately cut on beats.  This is useful for experimental music, or experimenting with any sort of rhythmic sound.</p>
+                <h3 align="left"> Frequency Bands </h3>
+                <p class="fancyParagraph upAnimated">By default, Stochastic Soundscape analyzes sounds in three frequency bands, to add an additional level of randomness.  The frequency boundaries can be adjusted, and this can also be entirely disabled.  All of this is also controlled in settings.py.</p>
+            </div>
+        </div>
+    </div>
 
   </div>
 </div>
