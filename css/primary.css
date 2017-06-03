@@ -116,6 +116,12 @@ div.paperRatio{
     .headerStyle{
         margin-left:.625rem;
     }
+    h3.subCapt{
+        margin: .625rem;
+    }
+    h4.posInfo{
+        margin: .625rem;
+    }
 }
 .secTitle{
     text-align: right;
