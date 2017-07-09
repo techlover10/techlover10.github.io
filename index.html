@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color">
     <!-- CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/metro/3.0.14/css/metro.min.css" rel="stylesheet" media="all">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/metro/3.0.14/css/metro-responsive.min.css" rel="stylesheet" media="all">
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.css" />
 
     <!-- Constants -->
     <script src="js/constants.js"></script>
 
     <!-- jQuery imports -->
-    <script   src="https://code.jquery.com/jquery-2.2.4.js"></script>
-    <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
 
     <!-- Animations and Appearance -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/2.2.0/jquery.waitforimages.min.js"></script>
@@ -40,12 +38,12 @@
   </head>
 
   <title>Home | Jared Wong</title>
-  <header id="main_nav" class="app-bar fixed-top"style="background-color:darkGray" data-role="appbar">
-    <ul id="nav_buttons" class="app-bar-menu" style="background-color:darkGray">
-      <li><a href="#/" id="home">Home</a></li>
+  <div id="main_nav" class="nav-panel">
+    <ul id="nav_buttons" style="background-color:darkGray">
+      <li style="padding-bottom: 30px"><a href="#/" id="home" class="navHeader">Home</a></li>
       <li>
-        <a href="" class="dropdown-toggle">Software</a>
-        <ul class="d-menu" data-role="dropdown">
+        <a class="navHeader">Software</a>
+        <ul>
           <li><a href="#dev/PyTransitionMatrix" id="PyTransitionMatrix">PyTransitionMatrix</a></li>
           <li><a href="#dev/StochasticSoundscape" id="StochasticSoundscape">Stochastic Soundscape</a></li>
           <li><a href="#dev/ClassTeX" id="ClassTeX">ClassTeX</a></li>
@@ -56,22 +54,20 @@
         </ul>
       </li>
       <li>
-        <a href="" class="dropdown-toggle">Music</a>
-        <ul class="d-menu" data-role="dropdown">
+        <a class="navHeader">Music</a>
+        <ul>
           <li><a href="#music/Composition" id="Composition">Composition</a></li>
         </ul>
       </li>
       <li>
-        <a href="" class="dropdown-toggle">About</a>
-        <ul class="d-menu" data-role="dropdown">
+        <a class="navHeader">About</a>
+        <ul>
           <li><a href="#about/Resume" id="Resume">Resume</a></li>
           <li><a href="#about/Experience" id="Experience">Experience</a></li>
         </ul>
       </li>
     </ul>
-    <div id="hamburger" class="app-bar-pullbutton automatic" style="display: none; background-color: grey"></div>
-  </header>
-    <div data-role="charm" data-position="bottom" id="about-charm" class="charm bottom-side" style="opacity: 1; display: block; bottom: 0px;" onClick="showHelpCharm()"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h1><span class="charm-closer"></span></div>
+  </div>
  
   <body style="height: auto">
     <div id="loadingCircle" style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:99; display: none; background-color: white; background-opacity: 50%">
@@ -84,8 +80,7 @@
         </div>
 
 
-    <div class="bg-black fg-white align-center padding-bottom:0px">
-      <button class="button" onclick="showHelpCharm()">Copyright Info</button>
+    <div class="copyrightDiv"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h6></div>
     </div>
     </div>
   </body>
