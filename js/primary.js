@@ -15,7 +15,7 @@ if (!isTouch()) {
     // Load perfect scrollbar plugin
     $('.mainPage').perfectScrollbar();
     window.onresize = function(event) {
-        $('.mainPage').css({'height': $(window).height()});
+        $('.mainPage').css({'height': $(window).height() - 1});
     }
 }
 
@@ -98,7 +98,7 @@ function loadMaster(hashArr, optArgs){
     document.title= titleString.replace(/_/g, " "); 
     window.scrollTo(0,0);
     OPTIONAL_ARGS = optArgs || "";
-    $('.mainPage').css({'height': $(window).height()});
+    $('.mainPage').css({'height': $(window).height() - 1});
 }
 
 function changeBorderColor( color){
@@ -118,7 +118,7 @@ function loadPage(name){
     }
     $('#buttons').velocity({ left: 20});
     $('#reset').velocity('fadeIn', {duration: FADE_SLIDE_DURATION});
-    $('.mainPage').css({'height': $(window).height()});
+    $('.mainPage').css({'height': $(window).height() - 1});
 }
 
 function loadUpperDiv(name){
