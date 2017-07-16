@@ -4,8 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color">
-    <!-- CSS -->
+    <!-- CSS, Fonts -->
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Constants -->
     <script src="js/constants.js"></script>
@@ -32,6 +33,7 @@
     <!-- Custom CSS and Scripts -->
     <link href="css/primary.css" rel="stylesheet">
     <link href="css/cah.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
 
     <link rel='icon' type='image/x-icon' href='favicon.ico' />
     <link rel="manifest" href="manifest.json"/>
@@ -71,7 +73,12 @@
  
   <body style="height: auto">
     <div id="loadingCircle" style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:99; display: none; background-color: white; background-opacity: 50%">
-      <div data-role="preloader" data-type="ring" data-style="dark" style="margin: auto; padding-top: 20%" class="preloader-ring dark-style"><div class="wrap"><div class="circle"></div></div><div class="wrap"><div class="circle"></div></div><div class="wrap"><div class="circle"></div></div><div class="wrap"><div class="circle"></div></div><div class="wrap"><div class="circle"></div></div></div>
+        <div class="cssload-thecube">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+        </div>
     </div>
 
     <div id="masterContainer" class="mainPage">
@@ -80,7 +87,6 @@
         </div>
 
 
-    <div class="copyrightDiv"><h6 class="text-light align-center">Website style adapted from Metro UI CSS under the MIT license.  All rights reserved. </h6></div>
     </div>
     </div>
   </body>

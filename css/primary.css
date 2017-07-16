@@ -21,6 +21,10 @@ h4.posInfo{
     margin: 0.3rem 0 0 0;
 }
 
+p{
+    font-family: "Lato", sans-serif;
+}
+
 .mainPage{
     width: 78vw;
     margin: 0px auto 0 auto;
@@ -110,6 +114,7 @@ div.nav-panel ul {
     margin-left: 0px;
     font-family: Tahoma, Geneva, sans-serif;
     padding-bottom:30px;
+    padding-left:10px;
 }
 
 div.nav-panel ul ul {
@@ -151,17 +156,20 @@ div.nav-panel a:visited{
 }
 
 h1 {
-    font-family:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align:center;
+    font-family:  "Lato", sans-serif;
     font-weight: 300;
 }
 
 h2 {
-    font-family:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-family:  "Lato Light", sans-serif;
     font-weight: 100;
 }
 
 h3 {
-    font-family:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align:center;
+    font-family:  "Lato", sans-serif;
     font-weight: 100;
 }
 

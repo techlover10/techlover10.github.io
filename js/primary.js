@@ -28,16 +28,6 @@ if (!isTouch()) {
 //    }
 //}
 
-function showHelpCharm(){
-
-  var  charm = $("#about-charm").data("charm");
-  if (charm.element.data("opened") === true) {
-    charm.close();
-  } else {
-    charm.open();
-  }
-}
-
 var colors = {
     about: aboutCol,
     music: musicCol,
