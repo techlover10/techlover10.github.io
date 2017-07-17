@@ -8,6 +8,43 @@ a:focus{
     text-decoration: none;
 }
 
+body {
+    font-family: "Roboto Regular", sans-serif;
+}
+
+h1 {
+    font-family: "Roboto Medium", sans-serif;
+}
+
+
+h2 {
+    font-family: "Roboto Regular", sans-serif;
+}
+
+h3 {
+    font-family: "Roboto Regular", sans-serif;
+}
+
+h4 {
+    font-family: "Roboto Regular", sans-serif;
+    font-weight: bold;
+}
+
+h5 {
+    font-family: "Roboto Regular", sans-serif;
+    font-weight: bold;
+}
+
+small {
+    font-family: "Roboto Black", sans-serif;
+    font-size:0.7em;
+}
+
+h4 small {
+    font-family: "Roboto Black", sans-serif;
+    font-size:0.8em;
+}
+
 br.smallBreak{
     display: none;
 }
@@ -42,7 +79,7 @@ height: 720px;
 }*/
     .prettyButtonSmall{
         font-size: 0.8rem;
-        font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
+        font-family: "Roboto Light",sans-serif;
         display:block;
         color: black;
         cursor: pointer;
@@ -55,7 +92,7 @@ height: 720px;
 }
 .prettyButton{
     font-size: 18px;
-    font-family: "Segoe UI Light","Open Sans",sans-serif,serif;
+    font-family: "Roboto Light",sans-serif;
     display:block;
     color: white;
     cursor: pointer;
@@ -150,6 +187,7 @@ div.paperRatio{
 p{
     line-height: 22px;
     font-size: 15px;
+    font-family: "Roboto Light", sans-serif;
 }
 
 p.fancyParagraph{
