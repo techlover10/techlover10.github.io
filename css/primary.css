@@ -1,5 +1,4 @@
-a:hover{
-    text-decoration: none;
+a:hover{ text-decoration: none;
 }
 
 a:active{
@@ -148,7 +147,7 @@ div.paperRatio{
     }
 }
 
-p.experienceParagraph{
+p{
     line-height: 22px;
     font-size: 15px;
 }
