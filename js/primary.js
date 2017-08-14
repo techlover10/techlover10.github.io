@@ -136,7 +136,7 @@ function reset(){
     $('#title').velocity("slideDown", {duration: FADE_SLIDE_DURATION});
     $('#infoExperience').velocity("fadeOut", {duration: FADE_OUT_DURATION});
     $('#reset').velocity('fadeOut', {duration: FADE_SLIDE_DURATION});
-    $('#mainExperience').velocity({height: 70});
+    $('#mainExperience').velocity({height: 85});
 }
 
 function hasLoadedBefore(){
