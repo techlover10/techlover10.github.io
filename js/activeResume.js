@@ -3,6 +3,11 @@ var IS_HIDDEN = {
     other: true
 };
 
+var coursesListDict = {
+    "cs": "Computer Science",
+    "meng": "Computer Science"
+}
+
 function get_is_hidden(id) {
     return IS_HIDDEN[id];
 }
@@ -12,11 +17,11 @@ function toggle_is_hidden(id){
 }
 
 function get_hidden (id) {
-    return "Show " + (id=="cs" ? "Computer Science" : "Other") + " Courses ▼";
+    return "Show " + (coursesListDict[id] || "Other") + " Courses ▼";
 }
 
 function get_shown (id) {
-    return "Hide " + (id=="cs" ? "Computer Science" : "Other") + " Courses ▲";
+    return "Hide " + (coursesListDict[id] || "Other") + " Courses ▲";
 }
 
 function showHideCourses (id) {
